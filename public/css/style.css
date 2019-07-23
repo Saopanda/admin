@@ -1,0 +1,342 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: MicrosoftYaHei-Bold;
+    font-size: 16px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #F1F1F1;
+}
+
+ul {
+    list-style: none;
+}
+
+.fl {
+    float: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fr {
+    float: right;
+}
+
+input,
+button {
+    outline: none;
+}
+
+
+
+input,
+textarea {
+    background: #ededed;
+    border: none;
+}
+
+.clearfloat:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.yellow-btn{
+    padding: 8px 17px;
+    background: #F98F15;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.blue-btn{
+    padding: 8px 17px;
+    background: #F98F15;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    background: #17A9FF;
+}
+.gray-btn{
+    padding: 8px 17px;
+    background: #F98F15;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    background: #C5C5C5;
+}
+.green-btn{
+    padding: 8px 17px;
+    background: #F98F15;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    background: #90C400;
+}
+.red-btn{
+    padding: 8px 17px;
+    background: #F98F15;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    background: #D24726;
+}
+.color-gray{
+    color: #696664;
+}
+.color-blue{
+    color: #17A9FF;
+}
+.color-yellow{
+    color: #F98F15;
+}
+.center{
+    padding: 20px 0;
+    text-align: center;
+}
+/* 公共 */
+/* nav */
+.nav {
+    width: 15%;
+    height: 100%;
+    background: #17A9FF;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo h1 {
+    height: 25px;
+    padding: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 10px;
+}
+
+.logo span {
+    height: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+.nav ul li {
+    padding: 10px 0;
+}
+
+.nav ul a {
+    float: right;
+    display: block;
+    width: 85%;
+    height: 68px;
+    text-align: center;
+    line-height: 68px;
+    border-radius: 10px 0px 0px 10px;
+    color: #fff;
+}
+
+.nav ul a:hover {
+    background: #F1F1F1;
+    color: #17A9FF;
+}
+
+.nav ul .active {
+    background: #F1F1F1;
+    color: #17A9FF;
+}
+
+
+/* content */
+.content {
+    width: 85%;
+    height: 100%;
+}
+
+/* header */
+.header {
+    height: 70px;
+    line-height: 70px;
+    background: #1497E4;
+}
+.header ul .closeLi{
+    position: relative;
+}
+.header ul .closePage{
+    position: absolute;
+    font-size: 30px;
+    color: #9b9898;
+    top: -1px;
+    text-align: right;
+    right: 12px;
+}
+.header ul li {
+    float: left;
+    margin-right: 20px;
+}
+
+.header .user {
+    position: relative;
+    color: #fff;
+    margin-right: 60px;
+}
+
+.header .user-avatar {
+    position: absolute;
+    top: 18px;
+    right: 180px;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header span {
+    cursor: pointer;
+}
+
+.header .user-name {
+    margin-right: 53px;
+    cursor: pointer;
+}
+
+.header ul {
+    margin-left: 20px;
+}
+
+.header ul li a {
+    display: block;
+    margin-top: 10px;
+    width: 190px;
+    height: 60px;
+    line-height: 68px;
+    text-align: center;
+    color: #fff;
+}
+
+.header ul li .active {
+    border-radius: 10px 10px 0px 0px;
+    color: #1497E4;
+    background: #F1F1F1;
+}
+
+/* main */
+
+.main {
+    width: 96%;
+    margin: 2%;
+    /* min-height: 83%; */
+    height: 83%;
+    overflow: auto;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 15px;
+}
+
+.main h2 {
+    font-weight: 500;
+    font-size: 19px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* 缺省页 */
+.none-page>a {
+    display: block !important;
+    width: 100% !important;
+    text-align: center;
+    background: #fff !important;
+}
+
+/* main table list css */
+table .btn-box{
+    display: inline-block!important;
+    width: 60px!important;
+    height: 25px!important;
+    line-height: 25px!important;
+    background: #eef2fe!important;
+
+}
+
+.table-list li {
+    float: left;
+    padding: 2px 8px;
+    margin: 0 10px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 10px;
+    background: #f2f2f2;
+    color: #7D7D7D;
+    border: solid #f2f2f2 1px;
+    cursor: pointer;
+}
+
+.table-list li:hover {
+    border: solid #1497E4 1px;
+    background: #fff;
+}
+
+.table-list li img {
+    width: 20px;
+    vertical-align: middle;
+}
+
+.table-list .iconBg {
+    color: #fff;
+    background: #1497E4 !important;
+}
+.pl70 {
+    width: 30%;
+    text-align: left;
+    padding-left: 70px;
+}
+/* 列表 操作 按钮 */
+.main table tbody a{
+    min-width: 40px;
+    height: 30px;
+    line-height: 32px;
+    padding: 2px 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+}
+/* 分页 */
+.pagination-box ul li{
+    width: 50px;
+    height: 50px;
+    float: left;
+    color: #000;
+}
+.pagination-box ul li a{
+    background: #fff;
+}
+form .unpass {
+    background: #AEB0B1!important;
+    cursor: not-allowed!important;
+}
+
+form .pass {
+    background: #1497E4!important;
+    cursor: pointer!important;
+}
+
