@@ -164,7 +164,19 @@
             <br><br>
             <label for="XCname">行程名称</label><input type="text" name="name" id="XCname" value="{{$rs->name}}">
             <label for="XCdate">出发时间</label><input type="date" name='start_date' id="XCdeta" value="{{$rs->start_date}}">
+            <br><br>
             <label for="XCdayNum">出行天数</label><input type="text" name="days" id="XCdayNum" value="{{$rs->days}}">
+            <label for="JDtype">选择分类</label>
+
+            <select name="classid" style="width: 230px;height: 40px;">
+                @if(isset($goodclass[0]))
+                    @foreach($goodclass as $k => $v)
+                        <option @if($rs->classid == $v->id)selected @endif value="{{$v->id}}">{{$v->name}}</option>
+                    @endforeach
+                @else
+                    <option value="0">请添加对应分类</option>
+                @endif
+            </select>
             <br><br>
             <label for="XCdayNum">指导价</label><input type="number" name="price_sel" min="0" value="{{$rs->price_sel}}">
 

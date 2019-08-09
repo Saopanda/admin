@@ -184,6 +184,7 @@
         <thead>
         <tr>
             <td>ID</td>
+            <td>所属分类</td>
             <td>行程名称</td>
             <td>出行天数</td>
             <td>出发时间</td>
@@ -200,6 +201,7 @@
                     <input class="checkbox" type="checkbox" name="" id="">
                     <span>{{$v->id}}</span>
                 </td>
+                <td>{{$v->classInfo->name}}</td>
                 <td>{{$v->name}}</td>
                 <td>{{$v->days}}</td>
                 <td>{{$v->start_date}}</td>

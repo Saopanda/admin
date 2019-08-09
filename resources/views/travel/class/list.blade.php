@@ -127,7 +127,7 @@ form{
 @endsection
 
 @section('toplist')
-<li><a class="active" href="">分类管理列表</a></li>
+<li><a class="active" href="">资源分类列表</a></li>
 <li><a href=""></a></li>
 @endsection
 

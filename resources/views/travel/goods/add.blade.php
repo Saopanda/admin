@@ -161,8 +161,19 @@
             <br><br>
             <label for="XCname">行程名称</label><input type="text" name="name" id="XCname" placeholder="请输入行程名称">
             <label for="XCdate">出发时间</label><input type="date" name='start_date' id="XCdeta" placeholder="请输入出发时间">
-            <label for="XCdayNum">出行天数</label><input type="text" name="days" id="XCdayNum"
-                                                     placeholder="请输入出行天数">
+            <br><br>
+
+            <label for="XCdayNum">出行天数</label><input type="text" name="days" id="XCdayNum" placeholder="请输入出行天数">
+            <label for="JDtype">选择分类</label>
+            <select name="classid" style="width: 230px;height: 40px;">
+                @if(isset($goodclass[0]))
+                    @foreach($goodclass as $k => $v)
+                        <option value="{{$v->id}}">{{$v->name}}</option>
+                    @endforeach
+                @else
+                    <option value="0">请添加对应分类</option>
+                @endif
+            </select>
             <br><br>
             <div class="submitbox">
                 <input type="submit" name="submit" id="submit" value="下一步添加每日行程">

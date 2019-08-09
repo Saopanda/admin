@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\travelgoods;
 use App\good_days;
 use App\day_resource;
+use App\goodclass;
 
 class travelGoodsController extends Controller
 {
@@ -21,13 +22,14 @@ class travelGoodsController extends Controller
         $title = '行程列表';
         $limit1 = $request->input('limit1','0');
         $limit2 = $request->input('limit2','0');
-        $goods = travelgoods::select('name','days','price','price_sel','id','start_date','status');
+        $goods = travelgoods::with('classInfo:id,classid,name')
+            ->select('name','days','price','price_sel','id','start_date','classid','status');
 
         if($limit2 != 0){
             $goods = $goods->where('price','>=',$limit1*10000)->where('price','<',$limit2*10000);
         }
-
         $goods = $goods->paginate(13);
+
         return view('travel.goods.list',['goods'=>$goods,'limit1'=>$limit1,'limit2'=>$limit2,'title'=>$title]);
     }
 
@@ -39,7 +41,8 @@ class travelGoodsController extends Controller
     public function create()
     {
         $title = '行程添加';
-        return view('travel.goods.add',['title'=>$title]);
+        $goodclass = goodclass::where('status','1')->get();
+        return view('travel.goods.add',['title'=>$title,'goodclass'=>$goodclass]);
     }
 
     /**
@@ -50,8 +53,8 @@ class travelGoodsController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->only('name','start_date','days');
-        if(!isset($data['name']) || !isset($data['start_date']) &&!isset($data['days'])){
+        $data = $request->only('name','start_date','days','classid');
+        if(!isset($data['name']) || !isset($data['start_date']) &&!isset($data['days']) &&!isset($data['classid'])){
             return view('travel.error.401',['mes'=>'请完整输入表单']);
         }
         if(!is_null($request->banner)){
@@ -246,10 +249,12 @@ class travelGoodsController extends Controller
     {
         $title = '行程编辑';
         $rs = travelgoods::where('id',$id)
-            ->select('id','name','start_date','days','banner','price_sel')
+            ->select('id','name','start_date','days','banner','price_sel','classid')
             ->first();
+        $goodclass = goodclass::where('status','1')->get();
+
         $rs->banner = json_decode($rs->banner);
-        return view('travel.goods.edit',['title'=>$title,'rs'=>$rs]);
+        return view('travel.goods.edit',['title'=>$title,'rs'=>$rs,'goodclass'=>$goodclass]);
     }
 
     /**
@@ -260,7 +265,7 @@ class travelGoodsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = $request->only('name','start_date','days','price_sel');
+        $data = $request->only('name','start_date','days','price_sel','classid');
         if(!isset($data['price_sel']) || !isset($data['name']) || !isset($data['start_date']) || !isset($data['days'])){
             return view('travel.error.401',['mes'=>'请不要留空']);
         }
