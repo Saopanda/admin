@@ -261,12 +261,17 @@ textarea {
 }
 
 /* 缺省页 */
-.none-page>a {
-    display: block !important;
-    width: 100% !important;
-    text-align: center;
-    background: #fff !important;
+.none-page{
+    width: 240px;
+    margin: auto;
+    margin-top: 100px;
 }
+/*.none-page>a {*/
+/*    display: block !important;*/
+/*    width: 100% !important;*/
+/*    text-align: center;*/
+/*    background: #fff !important;*/
+/*}*/
 
 /* main table list css */
 table .btn-box{
@@ -315,7 +320,7 @@ table .btn-box{
     min-width: 40px;
     height: 30px;
     line-height: 32px;
-    padding: 2px 10px;
+    padding: 5px 10px;
     color: #fff;
     border-radius: 5px;
     font-size: 14px;

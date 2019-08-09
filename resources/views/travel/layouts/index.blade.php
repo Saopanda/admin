@@ -26,7 +26,7 @@
         <div class="user fr">
             <img class="user-avatar" src="/images/avatar.jpg" alt="user avatar">
             <span class="user-name">用户名</span>
-            <span>【退出】</span>
+            <a href="/logout" style="color: #fff;"><span>【退出】</span></a>
         </div>
     </div>
     @section('main')
@@ -38,11 +38,17 @@
 <script src="/js/public.js"></script>
 <script>
 
-
-
     @section('script')
     @show
+    @if(!is_null(session('mes')))
+    $(function () {
+        alert('{{session('mes')}}')
+        location.href = ''
+    })
+    @endif
 </script>
+
+
 </html>
 
 

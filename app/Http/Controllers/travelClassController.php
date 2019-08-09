@@ -44,6 +44,10 @@ class travelClassController extends Controller
     public function store(Request $request)
     {
         $data = $request->only('name','classid');
+        if(!isset($data['name'])){
+            return view('travel.error.401',['mes'=>'请输入名字']);
+
+        }
         travelclass::insert($data);
         return redirect('/travelclass');
     }

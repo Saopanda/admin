@@ -11,4 +11,9 @@ class travelgoods extends Model
 
     protected $fillable = ['name','banner','status','start_date','days','price','price_sel'];
 
+    //  查询该行程下的日程
+    public function good_days()
+    {
+        return $this->hasMany('App\good_days','goodid','id');
+    }
 }

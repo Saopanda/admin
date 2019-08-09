@@ -28,10 +28,11 @@
     }
 
     form select {
-    width: 220px;
+    width: 230px;
     height: 40px;
     border: solid #efefef 2px;
     outline: none;
+    margin-left: -4px;
     }
 
     form select option {
@@ -145,10 +146,63 @@
     }
 
     /* 上传图片 */
+    /* 新上传图片 样式 */
+    .per img {
+    width: 100px;
+    margin: 10px 20px;
+    }
+
+    .perBox {
+    overflow: hidden;
+    background: #7D7D7D;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    }
+
+    .perBox img {
+    object-fit: cover;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+
+    }
+
+    .perBox b {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background: rgba(0, 0, 0, .5)
+    }
+
+    /* input type number 去掉箭头 */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    }
+
+    input[type="number"] {
+    -moz-appearance: textfield;
+    }
+    #perBox0,
+    #perBox1,
+    #perBox2,
+    #perBox3 {
+    width: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 125px;
+    }
 @endsection
 
 @section('toplist')
-    <li><a href="/resource">资源库</a></li>
+    <li><a href="javascript:history.back(-1)">资源库</a></li>
     <li><a class="active" >添加资源</a></li>
 @endsection
 @section('main')
@@ -171,6 +225,7 @@
             <label for="JDname">景点名称</label><input onkeyup="JDreg()" type="text" name="name" id="JDname" placeholder="请输入景点名称">
             <label for="JDposition">景点位置</label><input onkeyup="JDreg()" type="text" name='site' id="JDposition"
                                                        placeholder="请输入景点位置">
+            <br><br>
             <label for="JDtype">景点类型</label>
             <select name="lxid" id="JDtype">
                 @if(isset($Tclass[0]->dclass[0]))
@@ -182,22 +237,20 @@
                 @endif
             </select>
             <br><br>
-            <label for="JDdetail">景点描述</label><textarea name="des" id="JDdetail"
-                                                        placeholder="请输入景点描述"></textarea>
+            <label for="JDdetail">景点描述</label><textarea name="des" id="JDdetail" onkeyup="JDreg()" placeholder="请输入景点描述"></textarea>
             <br><br>
-
+            <!-- 上传图片 -->
             <label for="file">上传图片</label>
-            <div class="upimgbox upimgbox0">
-                <div class="uploadImgBtn" id="uploadImgBtn0">
-                    <input class="uploadImg" type="file" name="imgs[]" multiple id="file">
+            <div class="upimgbox upimgbox3">
+                <div class="uploadImgBtn">
+                    <input id="pic0" class="uploadImg" type="file" name="file" multiple >
                 </div>
-                <!-- 更改 per img -->
-                <div id="upimgperbox0"></div>
-                <!-- 更改 per img -->
+                <div id="perBox0"></div>
             </div>
+            <!--上传图片 -->
             <br><br>
 
-            <label for="price">参考价格</label><input type="text" onkeyup="JDreg()" name="price" id="JDprice" placeholder="请输入参考价格">
+            <label for="price">参考价格</label><input type="number" min="1" onkeyup="JDreg()" name="price" id="JDprice" placeholder="请输入参考价格">
             <br>
             <p class="ps"> *设置参考价格的资源添加到行程时会设置 <span>实时价格</span></p>
             <br><br>
@@ -208,11 +261,11 @@
         <!-- 酒店 -->
         <form class="pages" action="/resource" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
-            <input type="hidden" name="classid" class="fxid" value="1">
+            <input type="hidden" name="classid" class="fxid" value="2" id="JDdetail1" onkeyup="JDreg1()">
 
-            <label for="JDname">酒店名称</label><input type="text" name="name" id="JDname" placeholder="请输入酒店名称">
-            <label for="JDposition">酒店位置</label><input type="text" name='site' id="JDposition"
-                                                       placeholder="请输入酒店位置">
+            <label for="JDname">酒店名称</label><input type="text" name="name" id="JDname1" onkeyup="JDreg1()" placeholder="请输入酒店名称">
+            <label for="JDposition">酒店位置</label><input type="text" name='site' id="JDposition1" onkeyup="JDreg1()" placeholder="请输入酒店位置">
+            <br><br>
             <label for="JDtype">酒店类型</label>
             <select name="lxid" id="JDtype">
                 @if(isset($Tclass[1]->dclass[0]))
@@ -224,37 +277,36 @@
                 @endif
             </select>
             <br><br>
-            <label for="JDdetail">酒店描述</label><textarea name="des" id="JDdetail"
-                                                        placeholder="请输入酒店描述"></textarea>
+            <label for="JDdetail">酒店描述</label><textarea name="des" id="JDdetail1" placeholder="请输入酒店描述" onkeyup="JDreg1()"></textarea>
             <br><br>
 
+            <!-- 上传图片 -->
             <label for="file">上传图片</label>
-            <div class="upimgbox upimgbox1">
-                <div class="uploadImgBtn" id="uploadImgBtn1">
-                    <input class="uploadImg" type="file" name="imgs[]" multiple id="file">
+            <div class="upimgbox upimgbox3">
+                <div class="uploadImgBtn">
+                    <input id="pic1" class="uploadImg" type="file" name="file" multiple >
                 </div>
-                <!-- 更改 per img -->
-                <div id="upimgperbox1"></div>
-                <!-- 更改 per img -->
+                <div id="perBox1"></div>
             </div>
+            <!--上传图片 -->
             <br><br>
 
-            <label for="price">参考价格</label><input type="text" name="price" id="price" placeholder="请输入参考价格">
+            <label for="price">参考价格</label><input type="number" min="1" name="price" id="JDprice1" placeholder="请输入参考价格" onkeyup="JDreg1()">
             <br>
             <p class="ps"> *设置参考价格的资源添加到行程时会设置 <span>实时价格</span></p>
             <br><br>
             <div class="submitbox">
-                <input type="submit"  id="JDbtn2">
+                <input type="submit" class="unpass" id="JDbtn1" disabled>
             </div>
         </form>
         <!-- 餐厅 -->
         <form class="pages" action="/resource" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
-            <input type="hidden" name="classid" class="fxid" value="1">
+            <input type="hidden" name="classid" class="fxid" value="3">
 
-            <label for="JDname">餐厅名称</label><input type="text" name="name" id="JDname" placeholder="请输入餐厅名称">
-            <label for="JDposition">餐厅位置</label><input type="text" name='site' id="JDposition"
-                                                       placeholder="请输入餐厅位置">
+            <label for="JDname">餐厅名称</label><input type="text" name="name" id="JDname2" onkeyup="JDreg2()" placeholder="请输入餐厅名称">
+            <label for="JDposition">餐厅位置</label><input type="text" name='site' id="JDposition2" onkeyup="JDreg2()" placeholder="请输入餐厅位置">
+            <br><br>
             <label for="JDtype">餐厅类型</label>
             <select name="lxid" id="JDtype">
                 @if(isset($Tclass[2]->dclass[0]))
@@ -267,37 +319,36 @@
                 @endif
             </select>
             <br><br>
-            <label for="JDdetail">餐厅描述</label><textarea name="des" id="JDdetail"
-                                                        placeholder="请输入餐厅描述"></textarea>
+            <label for="JDdetail">餐厅描述</label><textarea name="des" id="JDdetail2" onkeyup="JDreg2()" placeholder="请输入餐厅描述"></textarea>
             <br><br>
 
+            <!-- 上传图片 -->
             <label for="file">上传图片</label>
-            <div class="upimgbox upimgbox2">
-                <div class="uploadImgBtn" id="uploadImgBtn2">
-                    <input class="uploadImg" type="file" name="imgs[]" multiple id="file">
+            <div class="upimgbox upimgbox3">
+                <div class="uploadImgBtn">
+                    <input id="pic2" class="uploadImg" type="file" name="file" multiple>
                 </div>
-                <!-- 更改 per img -->
-                <div id="upimgperbox2"></div>
-                <!-- 更改 per img -->
+                <div id="perBox2"></div>
             </div>
+            <!--上传图片 -->
+
             <br><br>
 
-            <label for="price">参考价格</label><input type="text" name="price" id="price" placeholder="请输入参考价格">
+            <label for="price">参考价格</label><input type="number" min="1" name="price" id="JDprice2" onkeyup="JDreg2()" placeholder="请输入参考价格">
             <br>
             <p class="ps"> *设置参考价格的资源添加到行程时会设置 <span>实时价格</span></p>
             <br><br>
             <div class="submitbox">
-                <input type="submit"  id="submit">
+                <input type="submit" class="unpass" id="JDbtn2" disabled>
             </div>
         </form>
         <!-- 交通 -->
         <form class="pages" action="/resource" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
-            <input type="hidden" name="classid" class="fxid" value="1">
+            <input type="hidden" name="classid" class="fxid" value="4">
 
-            <label for="JDname">交通起始站</label><input type="text" name="name" id="JDname" placeholder="如：北京到上海">
-
-            <label for="price">参考价格</label><input type="text" name="price" id="price" placeholder="请输入参考价格">
+            <label for="JDname">交通起始站</label><input type="text" name="name" id="JDname3"  onkeyup="JDreg3()" placeholder="如：北京到上海">
+            <br><br>
             <label for="JDtype">交通类型</label>
             <select name="lxid" id="JDtype">
                 @if(isset($Tclass[3]->dclass[0]))
@@ -309,21 +360,24 @@
                 @endif
             </select>
 
-            <br>
+            <br>            <br>
+
+            <label for="price">参考价格</label><input type="number" min="1" name="price" id="JDprice3" onkeyup="JDreg3()" placeholder="请输入参考价格">
+
             <p class="ps"> *设置参考价格的资源添加到行程时会设置 <span>实时价格</span></p>
             <br><br>
             <div class="submitbox">
-                <input type="submit"  id="submit">
+                <input type="submit" class="unpass" id="JDbtn3" disabled>
             </div>
         </form>
         <!-- 参考行程 -->
         <form class="pages" action="/resource" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
-            <input type="hidden" name="classid" class="fxid" value="1">
+            <input type="hidden" name="classid" class="fxid" value="5">
 
-            <label for="JDname">参考行程名称</label><input type="text" name="name" id="JDname" placeholder="请输入参考行程名称">
-            <label for="JDposition">参考行程位置</label><input type="text" name='site' id="JDposition"
-                                                         placeholder="请输入参考行程位置">
+            <label for="JDname">参考行程名称</label><input type="text" name="name" id="JDname4" onkeyup="JDreg4()" placeholder="请输入参考行程名称">
+            <label for="JDposition">参考行程位置</label><input type="text" name='site' id="JDposition4" onkeyup="JDreg4()" placeholder="请输入参考行程位置">
+            <br><br>
             <label for="JDtype">参考行程类型</label>
             <select name="lxid" id="JDtype">
                 @if(isset($Tclass[4]->dclass[0]))
@@ -335,43 +389,209 @@
                 @endif
             </select>
             <br><br>
-            <label for="JDdetail">参考行程描述</label><textarea name="des" id="JDdetail"
-                                                          placeholder="请输入参考行程描述"></textarea>
+            <label for="JDdetail">参考行程描述</label><textarea name="des" id="JDdetail4" onkeyup="JDreg4()" placeholder="请输入参考行程描述"></textarea>
             <br><br>
-
+            <!-- 上传图片 -->
             <label for="file">上传图片</label>
             <div class="upimgbox upimgbox3">
-                <div class="uploadImgBtn" id="uploadImgBtn3">
-                    <input class="uploadImg" type="file" name="imgs[]" multiple id="file">
+                <div class="uploadImgBtn">
+                    <input id="pic3" class="uploadImg" type="file" name="file" multiple>
                 </div>
-                <!-- 更改 per img -->
-                <div id="upimgperbox3"></div>
-                <!-- 更改 per img -->
+                <div id="perBox3"></div>
             </div>
+            <!--上传图片 -->
             <br><br>
 
-            <label for="price">参考价格</label><input type="text" name="price" id="price" placeholder="请输入参考价格">
+            <label for="price">参考价格</label><input type="number" min="1" name="price" id="JDprice4" onkeyup="JDreg4()" placeholder="请输入参考价格">
             <br>
             <p class="ps"> *设置参考价格的资源添加到行程时会设置 <span>实时价格</span></p>
             <br><br>
             <div class="submitbox">
-                <input type="submit"  id="submit">
+                <input type="submit" class="unpass" id="JDbtn4" disabled>
             </div>
         </form>
     </div>
     </div>
 @endsection
 @section('script')
+
+{{--        参考行程 --}}
+    var pic3 = document.getElementById('pic3')
+    var per3 = $('#perBox3');
+    pic3.addEventListener('change', function () {
+    var files1 = pic3.files;
+    var len = files1.length;
+    var perLen = $('#perBox3 .perBox').length
+    if (perLen > 5) {
+    alert('上传图片最多6张');
+    return false;
+    }
+    if (len > 6) {
+    alert('上传图片最多6张');
+    return false;
+    }
+
+    if (len + perLen > 6) {
+    alert('上传图片最多6张');
+    return false;
+    }
+
+    $.each(files1, function (k, i) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+    var data = e.target
+    .result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...'
+    per3.append("<div class='perBox'><img src='" + data +
+                    "'/><input type='hidden' name='imgs[]' value='" + data +
+                    "'/><b onclick='dele()'>×</b></div>")
+    };
+    // 以DataURL的形式读取文件:
+    reader.readAsDataURL(i);
+    })
+    });
+{{--        餐厅 --}}
+var pic2 = document.getElementById('pic2')
+var per2 = $('#perBox2');
+pic2.addEventListener('change', function () {
+    var files1 = pic2.files;
+    var len = files1.length;
+    var perLen = $('#perBox2 .perBox').length
+    if (perLen > 5) {
+        alert('上传图片最多6张');
+        return false;
+    }
+    if (len > 6) {
+        alert('上传图片最多6张');
+        return false;
+    }
+
+    if (len + perLen > 6) {
+        alert('上传图片最多6张');
+        return false;
+    }
+
+    $.each(files1, function (k, i) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            var data = e.target
+                .result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...'
+            per2.append("<div class='perBox'><img src='" + data +
+                "'/><input type='hidden' name='imgs[]' value='" + data +
+                "'/><b onclick='dele()'>×</b></div>")
+        };
+        // 以DataURL的形式读取文件:
+        reader.readAsDataURL(i);
+    })
+});
+
+
+        {{--        酒店 --}}
+var pic1 = document.getElementById('pic1')
+var per1 = $('#perBox1');
+pic1.addEventListener('change', function () {
+    var files1 = pic1.files;
+    var len = files1.length;
+    var perLen = $('#perBox1 .perBox').length
+    if (perLen > 5) {
+        alert('上传图片最多6张');
+        return false;
+    }
+    if (len > 6) {
+        alert('上传图片最多6张');
+        return false;
+    }
+
+    if (len + perLen > 6) {
+        alert('上传图片最多6张');
+        return false;
+    }
+
+    $.each(files1, function (k, i) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            var data = e.target
+                .result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...'
+            per1.append("<div class='perBox'><img src='" + data +
+                "'/><input type='hidden' name='imgs[]' value='" + data +
+                "'/><b onclick='dele()'>×</b></div>")
+        };
+        // 以DataURL的形式读取文件:
+        reader.readAsDataURL(i);
+    })
+});
+        {{--        酒店 --}}
+var pic0 = document.getElementById('pic0')
+var per0 = $('#perBox0');
+pic0.addEventListener('change', function () {
+    var files1 = pic0.files;
+    var len = files1.length;
+    var perLen = $('#perBox0 .perBox').length
+    if (perLen > 5) {
+        alert('上传图片最多6张');
+        return false;
+    }
+    if (len > 6) {
+        alert('上传图片最多6张');
+        return false;
+    }
+
+    if (len + perLen > 6) {
+        alert('上传图片最多6张');
+        return false;
+    }
+
+    $.each(files1, function (k, i) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            var data = e.target
+                .result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...'
+            per0.append("<div class='perBox'><img src='" + data +
+                "'/><input type='hidden' name='imgs[]' value='" + data +
+                "'/><b onclick='dele()'>×</b></div>")
+        };
+        // 以DataURL的形式读取文件:
+        reader.readAsDataURL(i);
+    })
+});
+
+    function dele() {
+    var e = window.event.target;
+    var child = e.parentNode;
+    var parent = e.parentNode.parentNode;
+    parent.removeChild(child);
+    }
+
+
+    // 点击添加带参数 截取参数 显示对应的元素
+    function GoPage(v){
+    console.log('ready');
+    var li = $('.iconChange');//按钮
+    var pages = $('.pages');//页面
+    $.each(pages,function(key,item){
+    item.style.display = 'none'
+    })
+    $.each(li,function(key,item){
+    console.log(key,item);
+    item.className='iconChange';
+    });
+    li[v].className='iconChange iconBg';
+    pages[v].style.display = 'block'
+    }
+    var canshu = document.location.search.slice(-1);
+    $(document).ready(GoPage(canshu));
+
+
     // 景点
     function JDreg() {
         var v0 = $('#JDname').val() !== '';
         var v1 = $('#JDposition').val() !== '';
-        var v2 = $('#JDprice').val() !== '';
+        var v2 = $('#JDprice').val()  > 0;
+        var v3 = $('#JDdetail').val() !== '';
         var btn = $('#JDbtn');
         // var v0 = inp[0].value !== '';
         // var v1 = inp[1].value !== '';
         console.log(v0 && v1 && v2);
-        if (v0 && v1 && v2) {
+        if (v0 && v1 && v2 && v3) {
         btn.addClass('pass');
         btn.removeClass('unpass');
         btn.attr('disabled',false);
@@ -387,12 +607,14 @@
     function JDreg1() {
         var v0 = $('#JDname1').val() !== '';
         var v1 = $('#JDposition1').val() !== '';
-        var v2 = $('#JDprice1').val() !== '';
+        var v2 = $('#JDprice1').val()  > 0;
+        var v3 = $('#JDdetail1').val() !== '';
+
         var btn = $('#JDbtn1');
         // var v0 = inp[0].value !== '';
         // var v1 = inp[1].value !== '';
         console.log(v0 && v1 && v2);
-        if (v0 && v1 && v2) {
+        if (v0 && v1 && v2 && v3) {
         btn.addClass('pass');
         btn.removeClass('unpass');
         btn.attr('disabled',false);
@@ -403,13 +625,78 @@
         btn.attr('disabled',true);
         }
     }
+    // 餐厅
+    function JDreg2() {
+    var v0 = $('#JDname2').val() !== '';
+    var v1 = $('#JDposition2').val() !== '';
+    var v2 = $('#JDprice2').val()  > 0;
+    var v3 = $('#JDdetail2').val() !== '';
+
+    var btn = $('#JDbtn2');
+    // var v0 = inp[0].value !== '';
+    // var v1 = inp[1].value !== '';
+    console.log(v0 && v1 && v2 && v3);
+    if (v0 && v1 && v2 && v3) {
+    btn.addClass('pass');
+    btn.removeClass('unpass');
+    btn.attr('disabled',false);
+    console.log('验证成功')
+    } else {
+    btn.addClass('unpass');
+    btn.removeClass('pass');
+    btn.attr('disabled',true);
+    }
+    }
+    // 交通
+    function JDreg3() {
+    var v0 = $('#JDname3').val() !== '';
+    var v2 = $('#JDprice3').val() > 0;
+
+    var btn = $('#JDbtn3');
+    if (v0 && v2) {
+    btn.addClass('pass');
+    btn.removeClass('unpass');
+    btn.attr('disabled',false);
+    console.log('验证成功')
+    } else {
+    btn.addClass('unpass');
+    btn.removeClass('pass');
+    btn.attr('disabled',true);
+    }
+    }
+    // 参考行程
+    function JDreg4() {
+    var v0 = $('#JDname4').val() !== '';
+    var v1 = $('#JDposition4').val() !== '';
+    var v2 = $('#JDprice4').val() > 0;
+    var v3 = $('#JDdetail4').val() !== '';
+
+    var btn = $('#JDbtn4');
+    // var v0 = inp[0].value !== '';
+    // var v1 = inp[1].value !== '';
+    console.log(v0 && v1 && v2 && v3);
+    if (v0 && v1 && v2 && v3) {
+    btn.addClass('pass');
+    btn.removeClass('unpass');
+    btn.attr('disabled',false);
+    console.log('验证成功')
+    } else {
+    btn.addClass('unpass');
+    btn.removeClass('pass');
+    btn.attr('disabled',true);
+    }
+    }
+
+
+
+
+
+
 
     $('#resource').addClass('active');
 
     $(function () {
     $('.iconChange').click(function(){
-    var classid = $(this).attr('data-classid')
-    $('.fxid').val(classid)
     })
     })
     // 切换tab
@@ -437,78 +724,6 @@
 
 
 
-    // 上传图片
-    // 参考：https://blog.csdn.net/weixin_42225141/article/details/80343812
-
-    // 景点
-    var parent0 = document.getElementsByClassName("upimgbox0")[0];
-    var child0 = document.getElementById("upimgperbox0");
-    $("#uploadImgBtn0").click(perImg(parent0, child0));
-    // 酒店
-    var parent1 = document.getElementsByClassName("upimgbox0")[0];
-    var child1 = document.getElementById("upimgperbox1");
-    $("#uploadImgBtn1").click(perImg(parent1, child1));
-    // 餐厅
-    var parent2 = document.getElementsByClassName("upimgbox0")[0];
-    var child2 = document.getElementById("upimgperbox2");
-    $("#uploadImgBtn2").click(perImg(parent2, child2));
-    // 行程
-    var parent3 = document.getElementsByClassName("upimgbox0")[0];
-    var child3 = document.getElementById("upimgperbox3");
-    $("#uploadImgBtn3").click(perImg(parent3, child3));
-
-
-
-
-    function perImg(parent, child) {
-    // 参数： parent child
-    /*
-    1、先获取input标签
-    2、给input标签绑定change事件
-    3、把图片回显
-    */
-    var $input = $("#file");
-    // console.log($input)
-    //            2、给input标签绑定change事件
-    $input.on("change", function () {
-    /*将子元素从父元素中删除*/
-    if (child.children.length !== 0) {
-    // parent.removeChild(child);
-    child.innerHTML = ''
-    }
-    // console.log(this)
-    //补充说明：因为我们给input标签设置multiple属性，因此一次可以上传多个文件
-    //获取选择图片的个数
-    var files = this.files;
-    var length = files.length;
-    if (length > 6) {
-    alert('上传图片最多6张');
-    return false;
-    }
-    // console.log("选择了" + length + "张图片");
-    //3、回显
-    $.each(files, function (key, value) {
-    //每次都只会遍历一个图片数据
-    var div = document.createElement("div"),
-    img = document.createElement("img");
-    // upimgbox = document.getElementById('upimgperbox0')
-    div.className = "pic";
-
-    var fr = new FileReader();
-    fr.onload = function () {
-    img.src = this.result;
-    div.appendChild(img);
-    child.appendChild(div);
-    }
-    fr.readAsDataURL(value);
-    });
-
-
-
-    })
-    //4、我们把当前input标签的id属性remove
-    $input.removeAttr("id");
-    }
 @endsection
 
 

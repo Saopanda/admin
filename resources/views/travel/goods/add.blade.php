@@ -67,7 +67,6 @@
     color: #fff;
     font-size: 18px;
     }
-
     /* 上传图片 */
     #upimgbox {
     width: 85%;
@@ -80,6 +79,24 @@
     height: 150px;
     margin-right: 10px;
     display: inline-block;
+    }
+
+    #upimgbox .pic {
+    position: relative;
+    border: solid 2px #ededed;
+    }
+
+    #upimgbox .pic b {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background: rgba(0, 0, 0, .5);
     }
 
     .uploadImgBtn {
@@ -112,6 +129,13 @@
     .pic img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
+    }
+
+    /* 上传图片 */
+
+    input[type=date]::-webkit-inner-spin-button {
+    visibility: hidden;
     }
 @endsection
 
@@ -148,6 +172,20 @@
 @endsection
 @section('script')
     $('#goods').addClass('active');
+
+    // 删除图片
+    $('#upimgbox').click(function(e){
+    console.log(e.target.innerHTML)
+    if(e.target.innerHTML == '×'){
+    var child = e.target.parentElement;
+    var parent = child.parentElement;
+    parent.removeChild(child);
+    $('#uploadImgBtn').css('display','block')
+    console.log(child,parent)
+    }
+    })
+
+
     // 切换tab
     var iconChange = document.getElementsByClassName('iconChange');
     tabChange(iconChange)
@@ -163,10 +201,10 @@
     3、把图片回显
     */
     //            1、先回去input标签
-    if ($('.pic').length >= 1) {
-    alert('上传图片最多6张');
-    return false;
-    }
+    // if ($('.pic').length >= 1) {
+    //     alert('上传图片最多6张');
+    //     return false;
+    // }
     var $input = $("#file");
     console.log($input)
     //            2、给input标签绑定change事件
@@ -178,21 +216,28 @@
     var length = files.length;
     console.log("选择了" + length + "张图片");
     //3、回显
-    $.each(files, function (key, value) {
+    var pic = document.getElementsByClassName('pic');
+    $.each(pic, function (key, value) {
     //每次都只会遍历一个图片数据
-    var div = document.createElement("div"),
+    value.style.display = 'none';
+    })
+    var pic = document.createElement("div"),
     img = document.createElement("img");
+    b = document.createElement("b");
+    b.innerHTML = '×'
+
     upimgbox = document.getElementById('upimgbox')
-    div.className = "pic";
+    pic.className = "pic";
 
     var fr = new FileReader();
     fr.onload = function () {
     img.src = this.result;
-    div.appendChild(img);
-    upimgbox.appendChild(div);
+    pic.appendChild(img);
+    pic.appendChild(b)
+    upimgbox.appendChild(pic);
+    $('#uploadImgBtn').css('display','none');//添加成功后隐藏
     }
-    fr.readAsDataURL(value);
-    })
+    fr.readAsDataURL(files[0]);
 
     })
 

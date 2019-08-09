@@ -184,21 +184,23 @@ padding: 10px 5px;
 resize: none;
 }
 /*搜索框*/
-.table-list .search {
+.addTypeContent .search {
+
 position:relative;
 width: 230px;
 height: 40px;
 border: solid #efefef 2px;
 outline: none;
 }
-.table-list .search input{
+.addTypeContent .search input{
+    box-sizing: border-box;
 width: 230px;
 height: 40px;
 border-bottom: solid #c0c0c0 1px;
 outline: none;
-padding-left: 15px;
+padding-left: 45px;
 }
-.table-list .search i{
+.addTypeContent .search i{
 background-image: url("http://58pic.ooopic.com/58pic/15/55/49/57V58PICgap.png");
 display: block;
 width: 40px;
@@ -270,19 +272,19 @@ cursor: pointer;
                 <ul id="ulClass" class="typeListTitle clearfloat fl">
                     <!-- <li data-id="1" data-classid='1a' class="iconChangePage1 active">景点类型1</li> -->
                 </ul>
-                <!-- 搜索框 -->
-                <div class="fl search">
-                    <!-- <i onclick="locationSearch($('#sv').val())"></i> -->
-                    
-                    <input type="text" class="Rsearch" data-classid="1" id="sv" placeholder='输入名称/位置搜索' onfocus="noActive()">
-                </div>
             </div>
-
+            <!-- 搜索框 -->
+            <div class="fr search">
+                <i onclick="locationSearch($('#sv').val())"></i>
+                <input class="Rsearch" data-classid="1" type="text" id="sv" placeholder='输入名称/位置搜索'>
+            </div>
+            <!-- 二级分类 -->
             <ul id="typeListUl" class="typeList clearfloat fl">
 
             </ul>
 
         </div>
+
         <!-- 添加按钮 -->
         <div class="submit-box">
             <!-- 添加备注 -->
@@ -299,8 +301,7 @@ cursor: pointer;
 @endsection
 @section('script')
 // <script>
-// 搜索框
-function Rsearch(e){
+    function Rsearch(e){
         var value = e.val()
         var classid = e.attr('data-classid')
         $.ajax({
@@ -308,30 +309,17 @@ function Rsearch(e){
             type: 'post',
             data: {
                 value: value,
-                classid: classid
+                classid:classid
             },
             success:function (mes) {
                 console.log(mes)
-                $("#typeListUl").html('')
-                window.class2 = mes;
-                $.each(window.class2, function (i, item) {
-                $("#typeListUl").append(
-                    "<li data-id=" + i + "><h4>" + item.name + "</h4><img src=" + JSON.parse(mes[i].imgs)[0] + ">" + "<div><p>" + item
-                    .des + "</p>" + "<span>参考价格：" + item.price + "</span>" + "</div>" +
-                    "</li>"
-                );
-            });
-            // 数据到form 表单中
-            clickli();
-            //切换选中状态
-            iconChange1Fc();
             }
         })
     }
 
-    // $('.Rsearch').blur(function () {
-    //     Rsearch($(this));
-    // })
+    $('.Rsearch').blur(function () {
+        Rsearch($(this))
+    })
     $('.Rsearch').change(function () {
         Rsearch($(this))
     })
@@ -341,8 +329,6 @@ function Rsearch(e){
         $('.Rsearch').attr('data-classid',classid)
         $('.Rsearch').val('')
     })
-// 搜索
-
 
     $('#goods').addClass('active');
 
@@ -363,6 +349,7 @@ function Rsearch(e){
 
     $(document).ready(function () {
         // 首次加载时，默认一级分类[0]的数据，渲染默认列表 
+        console.log('a')
         $.get(ip, function (res) {
             // console.log(res)
             var class1 = res.class.dclass;
@@ -375,7 +362,7 @@ function Rsearch(e){
                 );
             });
             // 选然位置选项
-            // locationSearch()
+            locationSearch()
             // 加载数据
             $.each(class2, function (i, item) {
                 $("#typeListUl").append(
@@ -385,6 +372,7 @@ function Rsearch(e){
                     "</li>"
                 );
             });
+
 
             document.getElementsByClassName('iconChange')[0].className = 'iconChange iconBg';
             document.getElementById('ulClass').children[0].className = 'iconChangePage1 active';
@@ -400,16 +388,11 @@ function Rsearch(e){
     clickli()
 
 
-    // 搜索获取焦点时，取消二级分类的选中状态
-    function noActive() {
-        var iconChange = document.getElementsByClassName('iconChangePage1');
-        var len = iconChange.length;
-        for (var i = 0; i < len; i++) {
-            iconChange[i].className = 'iconChangePage1';
-        }
+    // 搜索位置
+    function locationSearch(v) {
+        v = v || '';
+        console.log(v)
     }
-
-// 判断
 
     // 点击li 出 li 里的数据
     // var li1 = $('#typeListUl>li');
@@ -422,19 +405,14 @@ function Rsearch(e){
             li[i].onclick = function () {
                 var n = li[this.index].getAttribute('data-id');
                 var added = window.class2[n]
-                // console.log(n);
-                // console.log(added);
+                console.log(n);
+                console.log(added);
                 var price = prompt("请输入价格", " ");
-
-                var img = added.imgs;
-                if(added.imgs[0] == '['){
-                    img = JSON.parse(added.imgs)[0]
-                }
                 if (price != null) {
                     $("#addedUl").append(
                         "<li><h4>" + added.name +
                         "</h4><span class='delete' onclick='deleteElement(this)'>删除</span><p><img src=" +
-                        img + "></p><p>" + added.des +
+                        added.imgs + "></p><p>" + added.des +
                         "</p> <input type='hidden' name='resourceid[]' value=" + added.id +
                         "><input type='hidden' name='price[]' value=" + price + "></li>"
                     );
@@ -451,7 +429,7 @@ function Rsearch(e){
         }, function (res) {
             $("#ulClass").text('');
             $("#typeListUl").text('')
-            // console.log(res)
+            console.log(res)
             var claas1 = res.class.dclass;
             class2 = res.poi;
             $.each(claas1, function (i, item) {
@@ -482,7 +460,7 @@ function Rsearch(e){
             lxid: id
         }, function (res) {
             $("#typeListUl").text('');
-            // console.log(res)
+            console.log(res)
             class2 = res.poi;
             //渲染二级分类
             $.each(class2, function (i, item) {
@@ -492,9 +470,7 @@ function Rsearch(e){
                     .des + "</p>" + "<span>参考价格：" + item.price + "</span>" + "</div>" + "</li>"
                 );
             });
-            // 数据到form 表单中
             clickli();
-            //切换选中状态
             iconChange1Fc();
         })
     }
@@ -505,6 +481,7 @@ function Rsearch(e){
         if ($('.addTypeContent').css('display') == 'none') {
             $('.addTypeContent').css('display', 'block')
         }
+
         var iconChange = $('.iconChange');
         for (var i = 0; i < iconChange.length; i++) {
             iconChange[i].index = i;
@@ -514,7 +491,7 @@ function Rsearch(e){
                 }
                 var id = iconChange[this.index].getAttribute("data-id");
                 iconChange[this.index].className = 'iconChange iconBg';
-                // console.log(id);
+                console.log(id);
                 getClass1(id); //class 1
             }
         }

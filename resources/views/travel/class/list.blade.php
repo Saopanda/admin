@@ -24,7 +24,6 @@
 .main td {
     height: 40px;
 }
-
 .main thead {
     color: #fff;
     background: rgba(20, 151, 228, 1);
@@ -74,7 +73,6 @@ form{
     cursor: pointer;
 }
 @endsection
-
 
 @section('main')
 <div class="main fl clearfloat">

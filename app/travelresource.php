@@ -22,7 +22,4 @@ class travelresource extends Model
         return $this->belongsTo('App\travelclass','lxid','id');
     }
 
-
-
-
 }

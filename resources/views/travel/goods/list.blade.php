@@ -84,7 +84,7 @@
     color: #646363;
     }
 
-    .main button {
+    .main button{
     font-size: 13px;
     color: #fff;
     border: none;
@@ -147,6 +147,10 @@
     color: #fff;
     background: #1497E4;
     }
+    .main table tbody .button-padding{
+        padding:5px 10px;
+
+    }
 @endsection
 
 @section('toplist')
@@ -171,10 +175,10 @@
             </a>
         </ul>
         <a href="/goods/create" class="fr">添加</a>
-        <div class="search fr">
+        <!--<div class="search fr">
             <input class="" type="text" placeholder="输入名称/位置搜索">
-            <i><img src="../images/TravelRepository/搜索.png" alt=""></i>
-        </div>
+            <i><img src="/images/TravelRepository/搜索.png" alt=""></i>
+        </div>--!>
     </div>
     <table border="0" cellpadding="3" cellspacing="1" bgcolor="#fff">
         <thead>
@@ -182,8 +186,10 @@
             <td>ID</td>
             <td>行程名称</td>
             <td>出行天数</td>
+            <td>出发时间</td>
             <td>成本价</td>
             <td>指导价</td>
+            <td>制作状态</td>
             <td>操作</td>
         </tr>
         </thead>
@@ -192,22 +198,30 @@
             <tr>
                 <td>
                     <input class="checkbox" type="checkbox" name="" id="">
-                    <span>1</span>
+                    <span>{{$v->id}}</span>
                 </td>
                 <td>{{$v->name}}</td>
                 <td>{{$v->days}}</td>
+                <td>{{$v->start_date}}</td>
                 <td>{{$v->price}}</td>
                 <td>{{$v->price_sel}}</td>
+                <td>@if($v->status == 0)未完成 @else 已完成 @endif</td>
                 <td>
-                    <a href="/goods/{{$v->id}}/edit" class="modify">修改</a>
+                    <a href="/goods/{{$v->id}}" class="modify button-padding" style="background-color:#00CC66">查看行程</a>
+                    @if($v->status == 0)
+                    <a href="/goods_poi/{{$v->id}}/create" class="modify button-padding" style="background-color:#4caca7">继续制作</a>
+                    @else
+                        <a href="/goods/{{$v->id}}/edit" class="modify button-padding" style="background-color:#e26000">修改行程</a>
+                    @endif
+
+                    <a href="" class="ljfx button-padding" style="background-color:#1497E4">链接分享</a>
+                    <a href="" class="ewmfx button-padding" style="background-color:#1497E4">二维码分享</a>
+                    <a href="" class="downfile button-padding" style="background-color:#ff8820">下载文档</a>
                     <form action="/goods/{{$v->id}}" method="post">
                         {{csrf_field()}}
                         {{method_field('delete')}}
-                        <button class="delete">删除</button>
+                        <button class="delete" style="background-color: #d23226">删除</button>
                     </form>
-                    <a href="" class="ljfx">链接分享</a>
-                    <a href="" class="ewmfx">二维码分享</a>
-                    <a href="" class="downfile">下载文档</a>
                 </td>
             </tr>
         @endforeach

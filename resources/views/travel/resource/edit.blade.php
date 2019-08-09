@@ -28,10 +28,11 @@
     }
 
     form select {
-    width: 220px;
+    width: 230px;
     height: 40px;
     border: solid #efefef 2px;
     outline: none;
+    margin-left: -4px;
     }
 
     form select option {
@@ -52,7 +53,7 @@
     width: 150px;
     height: 150px;
     border: solid #ededed 2px;
-    background: url('/images/TravelRepository/upimg.png') no-repeat 50%;
+    background: url('./images/TravelRepository/upimg.png') no-repeat 50%;
     }
 
     form input[type='file'] {
@@ -145,6 +146,59 @@
     }
 
     /* 上传图片 */
+    /* 新上传图片 样式 */
+    .per img {
+    width: 100px;
+    margin: 10px 20px;
+    }
+
+    .perBox {
+    overflow: hidden;
+    background: #7D7D7D;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    }
+
+    .perBox img {
+    object-fit: cover;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+
+    }
+
+    .perBox b {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background: rgba(0, 0, 0, .5)
+    }
+
+    /* input type number 去掉箭头 */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    }
+
+    input[type="number"] {
+    -moz-appearance: textfield;
+    }
+    #perBox0,
+    #perBox1,
+    #perBox2,
+    #perBox3 {
+    width: 80% !important;
+    position: absolute;
+    top: 0;
+    left: 125px;
+    }
 @endsection
 
 @section('toplist')
@@ -164,9 +218,13 @@
         <form action="/resource/{{$res->id}}" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
             {{method_field('put')}}
+            <input type="hidden" name="classid" value="{{$res->classinfo->id}}">
             <label for="JDname">名称</label><input type="text" name="name" id="JDname" value="{{$res->name}}">
-            <label for="JDposition">位置</label><input type="text" name='site' id="JDposition"
-                                                     value="{{$res->site}}">
+            @if($res->classinfo->id != 4)
+            <label for="JDposition">位置</label><input type="text" name='site' id="JDposition" value="{{$res->site}}">
+            @endif
+            <br>
+            <br>
             <label for="JDtype">类型</label>
             <select name="lxid" id="JDtype">
                 @foreach($res->lxinfo as $k=>$v)
@@ -174,30 +232,36 @@
                 @endforeach
             </select>
             <br><br>
+            @if($res->classinfo->id != 4)
             <label for="JDdetail">描述</label><textarea name="des" id="JDdetail" >{{$res->des}}</textarea>
-            <br><br>
+                <br><br>
+            @endif
 
+            @if($res->classinfo->id != 4)
 
             <label for="file">上传图片</label>
-            <div class="upimgbox upimgbox0">
-                <div class="uploadImgBtn" id="uploadImgBtn0">
-                    <input class="uploadImg" type="file" name="imgs[]" multiple id="file">
+            <div class="upimgbox upimgbox3">
+                <div class="uploadImgBtn">
+                    <input id="pic3" class="uploadImg" type="file" name="file" multiple>
                 </div>
-                <!-- 更改 per img -->
-                <div id="upimgperbox0">
+                <div id="perBox3">
                     @if($res->imgs)
                         @foreach($res->imgs as $k=>$v)
-                            <div class="pic">
+                            <div class="pic hehe">
                                 <img src="{{$v}}">
                             </div>
                         @endforeach
                     @endif
                 </div>
-                <!-- 更改 per img -->
             </div>
-            <br><br>
+                <br><br>
 
-            <label for="price">参考价格</label><input type="number" name="price" id="price" value="{{$res->price}}">
+
+
+
+            @endif
+
+            <label for="price">参考价格</label><input type="number" min="0" name="price" id="price" value="{{$res->price}}">
             <br>
             <p class="ps"> *设置参考价格的资源添加到行程时会设置 <span>实时价格</span></p>
             <br><br>
@@ -211,6 +275,41 @@
 @endsection
 @section('script')
     $('#resource').addClass('active');
+
+    var pic3 = document.getElementById('pic3')
+    var per3 = $('#perBox3');
+    pic3.addEventListener('change', function () {
+    $('.hehe').hide()
+    var files1 = pic3.files;
+    var len = files1.length;
+    var perLen = $('#perBox3 .perBox').length
+    if (perLen > 5) {
+    alert('上传图片最多6张');
+    return false;
+    }
+    if (len > 6) {
+    alert('上传图片最多6张');
+    return false;
+    }
+
+    if (len + perLen > 6) {
+    alert('上传图片最多6张');
+    return false;
+    }
+
+    $.each(files1, function (k, i) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+    var data = e.target
+    .result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...'
+    per3.append("<div class='perBox'><img src='" + data +
+                    "'/><input type='hidden' name='imgs[]' value='" + data +
+                    "'/><b onclick='dele()'>×</b></div>")
+    };
+    // 以DataURL的形式读取文件:
+    reader.readAsDataURL(i);
+    })
+    });
 
     // 参考：https://blog.csdn.net/weixin_42225141/article/details/80343812
     // 景点
@@ -268,5 +367,11 @@
     })
     //4、我们把当前input标签的id属性remove
     $input.removeAttr("id");
+    }
+    function dele() {
+    var e = window.event.target;
+    var child = e.parentNode;
+    var parent = e.parentNode.parentNode;
+    parent.removeChild(child);
     }
 @endsection

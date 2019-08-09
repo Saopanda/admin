@@ -89,7 +89,7 @@
     color: #fff;
     border: none;
     width: 60px;
-    height: 25px;
+    height: 29px;
     line-height: 25px;
     border-radius: 5px;
     }
@@ -159,7 +159,7 @@
                     </ul>
                 </div>
                 <div class="none-page">
-                    <a href="/resource/create"><img src="/images/none-page.png" alt=""></a>
+                    <a href="/resource/create?a={{$classid-1}}"><img src="/images/none-page.png" alt=""></a>
                 </div>
             </div>
         @else
@@ -175,11 +175,11 @@
                             </a>
                         @endforeach
                     </ul>
-                    <a href="/resource/create" class="fr">添加</a>
-                    <div class="search fr">
+                    <a href="/resource/create?a={{$classid-1}}" class="fr">添加</a>
+                    <!-- <div class="search fr">
                         <input class="" type="text" placeholder="输入名称/位置搜索">
-                        <i><img src="../images/TravelRepository/搜索.png" alt=""></i>
-                    </div>
+                        <i><img src="/images/TravelRepository/搜索.png" alt=""></i>
+                    </div> -->
                 </div>
 
                 <table border="0" cellpadding="3" cellspacing="1" bgcolor="#fff">
@@ -188,9 +188,10 @@
                         <td>ID</td>
                         <td>名称</td>
                         <td>类型</td>
+                        @if($classid != 4)
                         <td>位置</td>
-                        <td>描述</td>
-                        <td>价格</td>
+                        @endif
+                        <td>参考价格</td>
                         <td>操作</td>
                     </tr>
                     </thead>
@@ -203,8 +204,9 @@
                             </td>
                             <td>{{$v->name}}</td>
                             <td>{{$v->lxinfo->name}}</td>
+                            @if($classid != 4)
                             <td>{{$v->site}}</td>
-                            <td>{{$v->des}}</td>
+                            @endif
                             <td>{{$v->price}}</td>
                             <td>
                                 <a href="/resource/{{$v->id}}/edit" class="modify">修改</a>
@@ -222,7 +224,6 @@
                     {{ $resource->appends(['classid' => $classid])->links() }}
                 </div>
             </div>
-            <!-- main 内容 -->
         @endif
 @endsection
 @section('script')
