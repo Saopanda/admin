@@ -236,7 +236,7 @@
                     <p class="pl32">
                         @if($vv->resource_info->classid != 4)
                         @foreach(json_decode($vv->resource_info->imgs) as $k1=>$v1)
-                        <img src="/storage/{{$v1}}">
+                        <img src="{{$v1}}">
                         @endforeach
                         @endif
                     </p>
