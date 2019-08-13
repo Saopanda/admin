@@ -142,7 +142,7 @@ class travelResourceController extends Controller
             ->select('id','classid','name','site','des','imgs','price','lxid')
             ->first();
         $imgs = json_decode($res->imgs);
-        	$res->imgs = $imgs;
+        $res->imgs = $imgs;
         //  读取景点类型
         $res->lxinfo = travelclass::where('classid',$res->classid)
             ->get();

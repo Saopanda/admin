@@ -248,7 +248,7 @@
                     @if($res->imgs)
                         @foreach($res->imgs as $k=>$v)
                             <div class="pic hehe">
-                                <img src="{{$v}}">
+                                <img src="/{{$v}}">
                             </div>
                         @endforeach
                     @endif

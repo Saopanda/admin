@@ -59,6 +59,8 @@ Route::group(['middleware'=>'admin'],function (){
     Route::put('/goods_poi/{id}/{gid}','travelGoodsController@poi_edit_do');        //  修改某日的点操作
     Route::delete('/goods_poi/{id}','travelGoodsController@poi_delete');        //  删除某一天
 
+    Route::get('/goods/{id}/top','travelGoodsController@good_top');        //  精品行程
+
 
     /**
      * 订单控制器

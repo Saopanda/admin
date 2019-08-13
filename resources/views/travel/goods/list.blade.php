@@ -191,6 +191,7 @@
             <td>成本价</td>
             <td>指导价</td>
             <td>制作状态</td>
+            <td>是否精品</td>
             <td>操作</td>
         </tr>
         </thead>
@@ -208,7 +209,13 @@
                 <td>{{$v->price}}</td>
                 <td>{{$v->price_sel}}</td>
                 <td>@if($v->status == 0)未完成 @else 已完成 @endif</td>
+                <td>@if($v->is_top == 1)是 @else 否 @endif</td>
                 <td>
+                    @if($v->is_top == 0)
+                        <a href="/goods/{{$v->id}}/top" class="modify button-padding" style="background-color:#4caca7">加精</a>
+                    @else
+                        <a href="/goods/{{$v->id}}/top" class="modify button-padding" style="background-color:#e26000">取精</a>
+                    @endif
                     <a href="/goods/{{$v->id}}" class="modify button-padding" style="background-color:#00CC66">查看行程</a>
                     @if($v->status == 0)
                     <a href="/goods_poi/{{$v->id}}/create" class="modify button-padding" style="background-color:#4caca7">继续制作</a>
