@@ -209,12 +209,16 @@
                 <ul id="addedUl">
                     @foreach($rs as $k=>$v)
                     <li>
+                        @if(isset($v->resource_info))
                         <h4>{{$v->resource_info->name}}</h4>
                         <span class="delete" onclick="deleteElement(this)">删除</span>
-                        <p><img src="/storage/{{json_decode($v->resource_info->imgs)[0]}}"></p>
+                        <p><img src="{{json_decode($v->resource_info->imgs)[0]}}"></p>
                         <p>{{$v->resource_info->des}}</p>
                         <input type="hidden" name="resourceid[]" value="{{$v->resource_id}}">
                         <input type="hidden" name="price[]" value="{{$v->price}}">
+                        @else
+                        <h4>资源已失效, 请直接添加新资源</h4>
+                        @endif
                     </li>
                     @endforeach
                 </ul>

@@ -232,10 +232,8 @@
                 @endforeach
             </select>
             <br><br>
-            @if($res->classinfo->id != 4)
             <label for="JDdetail">描述</label><textarea name="des" id="JDdetail" >{{$res->des}}</textarea>
                 <br><br>
-            @endif
 
             @if($res->classinfo->id != 4)
 

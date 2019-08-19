@@ -12,6 +12,22 @@ use App\goodclass;
 
 class travelGoodsController extends Controller
 {
+
+    /**
+     *  加精
+     */
+    public function good_top($id)
+    {
+        $is_top = travelgoods::where('id',$id)->value('is_top');
+        if($is_top == 0){
+            travelgoods::where('id',$id)->update(['is_top'=>1]);
+        }else{
+            travelgoods::where('id',$id)->update(['is_top'=>0]);
+        }
+        return back();
+
+    }
+
     /**
      * 商品列表
      *
@@ -23,7 +39,7 @@ class travelGoodsController extends Controller
         $limit1 = $request->input('limit1','0');
         $limit2 = $request->input('limit2','0');
         $goods = travelgoods::with('classInfo:id,classid,name')
-            ->select('name','days','price','price_sel','id','start_date','classid','status');
+            ->select('name','days','price','price_sel','id','start_date','classid','status','is_top');
 
         if($limit2 != 0){
             $goods = $goods->where('price','>=',$limit1*10000)->where('price','<',$limit2*10000);
