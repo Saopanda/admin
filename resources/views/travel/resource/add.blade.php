@@ -348,7 +348,7 @@
             <input type="hidden" name="classid" class="fxid" value="4">
 
             <label for="JDname">交通起始站</label><input type="text" name="name" id="JDname3"  onkeyup="JDreg3()" placeholder="如：北京到上海">
-            <br><br>
+
             <label for="JDtype">交通类型</label>
             <select name="lxid" id="JDtype">
                 @if(isset($Tclass[3]->dclass[0]))
@@ -359,8 +359,10 @@
                     <option value="0">请添加对应分类</option>
                 @endif
             </select>
+            <br><br>
 
-            <br>            <br>
+            <label for="JDdetail">交通描述</label><textarea name="des" id="JDdetail2" onkeyup="JDreg3()" placeholder="请输入交通描述"></textarea>
+            <br><br>
 
             <label for="price">参考价格</label><input type="number" min="1" name="price" id="JDprice3" onkeyup="JDreg3()" placeholder="请输入参考价格">
 
