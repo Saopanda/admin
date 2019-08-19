@@ -224,6 +224,7 @@
             <ul>
                 @foreach($v->day_resource as $kk =>$vv)
                 <li>
+                    @if(isset($vv->resource_info))
                     <p><img class="class-icon" src="/images/TravelRepository/icon/{{$vv->resource_info->classinfo->icon}}">
                         <strong class="titleName" style="font-weight: 600" >{{$vv->resource_info->classinfo->name}}</strong>
                     </p>
@@ -243,6 +244,9 @@
                     @endif
                     <p class="color-gray pl32">{{$vv->resource_info->des}}
                     </p>
+                    @else
+                        <h3>资源已失效, 请重新编辑</h3>
+                    @endif
                 </li>
                 @endforeach
                 <li>
@@ -266,7 +270,11 @@
             <h5>价格包含</h5>
             <p>
             @foreach($data['res'] as $k3 => $v3)
-            {{$v3->resource_info->lxinfo->name}} ：{{$v3->resource_info->name}}<br>
+                @if(isset($v3->resource_info))
+                {{$v3->resource_info->lxinfo->name}} ：{{$v3->resource_info->name}}<br>
+                @else
+                    资源已失效 <br>
+                @endif
             @endforeach
             </p>
             <h5>购买须知 <a href="/goods_poi/{{$rs->id}}/last" class="edit-a"> 编辑</a></h5>

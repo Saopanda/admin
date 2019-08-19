@@ -72,7 +72,7 @@ class travelResourceController extends Controller
         }
 
         if($data['classid'] == '4'){
-            $data['imgs'] = json_encode(['/traffic.jpg']);
+            $data['imgs'] = json_encode(['/storage/traffic.jpg']);
             $data['des'] = '';
         }
         //  数据库添加操作
@@ -170,7 +170,7 @@ class travelResourceController extends Controller
             $data['imgs'] = json_encode($img);
         }
         if($data['classid'] == '4'){
-            $data['imgs'] = json_encode(['/traffic.jpg']);
+            $data['imgs'] = json_encode(['/storage/traffic.jpg']);
             $data['des'] = '';
 
         }
