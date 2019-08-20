@@ -59,7 +59,7 @@ class travelResourceController extends Controller
     public function store(Request $request)
     {
         //  筛选需要的数据
-        $data = $request->only('name','site','lxid','des','price','classid');
+        $data = $request->only('name','site','lxid','des','price','classid','text');
         if(!is_null($request->imgs)){
             //  进行上传图片动作
             foreach($request->imgs as $k => $v){
@@ -138,7 +138,7 @@ class travelResourceController extends Controller
         $title = '资源编辑';
         $res = travelresource::with('classinfo:id,name,icon')
             ->where('id',$id)
-            ->select('id','classid','name','site','des','imgs','price','lxid')
+            ->select('id','classid','name','site','des','imgs','price','lxid','text')
             ->first();
         $imgs = json_decode($res->imgs);
         $res->imgs = $imgs;
@@ -157,7 +157,7 @@ class travelResourceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = $request->only('name','site','lxid','des','price','classid');
+        $data = $request->only('name','site','lxid','des','price','classid','text');
         if(!is_null($request->imgs)){
             //  进行上传图片动作
             foreach($request->imgs as $k => $v){

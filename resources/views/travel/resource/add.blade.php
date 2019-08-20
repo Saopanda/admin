@@ -284,15 +284,13 @@
             <br><br>
             <label for="JDdetail">酒店描述</label><textarea name="des" id="JDdetail1" placeholder="请输入酒店描述" onkeyup="JDreg1()"></textarea>
            
-                                <!-- Uedit --> 
-                                <br><br>
-                    <div class="clearfloat" style="margin-bottom:20px;">
-                            <label for="JDdetail">酒店详情</label>
-                            <script id="editor" type="text/plain" style="width:912px;height:300px;float: right;">
-                                <p>我是一个示例，酒店详情！</p>
-                            </script>
-                            <!-- <button onclick="getContent()">获得内容</button> -->
-                    </div>
+                                <!-- Uedit -->
+            <br><br>
+                <div class="clearfloat" style="margin-bottom:20px;">
+                    <label for="JDdetail">酒店详情</label>
+                    <textarea name="text" id="editor" type="text/plain" style="width:912px;height:300px;float: right;"></textarea>
+                        <!-- <button onclick="getContent()">获得内容</button> -->
+                </div>
                     <!-- Uedit -->
 
             <!-- 上传图片 -->
