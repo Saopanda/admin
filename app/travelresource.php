@@ -9,7 +9,7 @@ class travelresource extends Model
 
     protected $table = 'travelresource';
 
-    protected $fillable = ['name','classid','site','des','imgs','price','status','lxid'];
+    protected $fillable = ['name','classid','site','des','imgs','price','status','lxid','text'];
 
     //  获取资源所属上级分类信息
     public function classinfo(){
