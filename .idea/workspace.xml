@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="321a5711-718f-4010-910a-3b6e1e15f229" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/travelGoodsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/travelGoodsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/travelResourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/travelResourceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/travel/goods/editpoi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/travel/goods/editpoi.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/travel/goods/info.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/travel/goods/info.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/travel/resource/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/travel/resource/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/travel/resource/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/travel/resource/edit.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,11 +58,11 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/travel/resource/add.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
+            <state relative-caret-position="6205">
               <caret line="365" selection-start-line="365" selection-end-line="365" />
             </state>
           </provider>
@@ -77,7 +71,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/travel/resource/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
+            <state relative-caret-position="4012">
               <caret line="236" selection-start-line="236" selection-end-line="236" />
             </state>
           </provider>
@@ -86,8 +80,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/travelResourceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="172" selection-start-line="172" selection-end-line="172" />
+            <state relative-caret-position="474">
+              <caret line="158" column="5" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -254,7 +248,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="118" />
+    <option name="x" value="231" />
     <option name="y" value="23" />
     <option name="width" value="1403" />
     <option name="height" value="814" />
@@ -265,6 +259,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,7 +315,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -385,12 +379,15 @@
       <workItem from="1565669181444" duration="82000" />
       <workItem from="1565669408680" duration="289000" />
       <workItem from="1565675928337" duration="2018000" />
-      <workItem from="1566210506797" duration="320000" />
+      <workItem from="1566210506797" duration="616000" />
+      <workItem from="1566212728110" duration="3000" />
+      <workItem from="1566268007481" duration="118000" />
+      <workItem from="1566282224716" duration="10000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89987000" />
+    <option name="totallyTimeSpent" value="90414000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -402,10 +399,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="118" y="23" width="1403" height="814" extended-state="0" />
+    <frame x="231" y="23" width="1403" height="814" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22997795" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.238795" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -710,22 +707,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/travel/resource/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
+        <state relative-caret-position="6205">
           <caret line="365" selection-start-line="365" selection-end-line="365" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/travel/resource/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
+        <state relative-caret-position="4012">
           <caret line="236" selection-start-line="236" selection-end-line="236" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/travelResourceController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="172" selection-start-line="172" selection-end-line="172" />
+        <state relative-caret-position="474">
+          <caret line="158" column="5" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
