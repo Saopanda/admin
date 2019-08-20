@@ -181,6 +181,7 @@
                         <i><img src="/images/TravelRepository/搜索.png" alt=""></i>
                     </div> -->
                 </div>
+                <div class="table-box" style="min-height:572px;">
 
                 <table border="0" cellpadding="3" cellspacing="1" bgcolor="#fff">
                     <thead>
@@ -220,6 +221,8 @@
                     @endforeach
                     </tbody>
                 </table>
+                </div>
+                
                 <div class="pagination-box">
                     {{ $resource->appends(['classid' => $classid])->links() }}
                 </div>
