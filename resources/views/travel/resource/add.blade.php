@@ -231,7 +231,7 @@
             <label for="JDposition">景点位置</label><input onkeyup="JDreg()" type="text" name='site' id="JDposition"
                                                        placeholder="请输入景点位置">
             <br><br>
-            <label for="JDtype">景点类型</label>
+            <label for="JDtype">景点目的地</label>
             <select name="lxid" id="JDtype">
                 @if(isset($Tclass[0]->dclass[0]))
                     @foreach($Tclass[0]->dclass as $k => $v)
@@ -271,7 +271,7 @@
             <label for="JDname">酒店名称</label><input type="text" name="name" id="JDname1" onkeyup="JDreg1()" placeholder="请输入酒店名称">
             <label for="JDposition">酒店位置</label><input type="text" name='site' id="JDposition1" onkeyup="JDreg1()" placeholder="请输入酒店位置">
             <br><br>
-            <label for="JDtype">酒店类型</label>
+            <label for="JDtype">酒店目的地</label>
             <select name="lxid" id="JDtype">
                 @if(isset($Tclass[1]->dclass[0]))
                     @foreach($Tclass[1]->dclass as $k => $v)
@@ -320,7 +320,7 @@
             <label for="JDname">餐厅名称</label><input type="text" name="name" id="JDname2" onkeyup="JDreg2()" placeholder="请输入餐厅名称">
             <label for="JDposition">餐厅位置</label><input type="text" name='site' id="JDposition2" onkeyup="JDreg2()" placeholder="请输入餐厅位置">
             <br><br>
-            <label for="JDtype">餐厅类型</label>
+            <label for="JDtype">餐厅目的地</label>
             <select name="lxid" id="JDtype">
                 @if(isset($Tclass[2]->dclass[0]))
 
@@ -393,7 +393,7 @@
             <label for="JDname">参考行程名称</label><input type="text" name="name" id="JDname4" onkeyup="JDreg4()" placeholder="请输入参考行程名称">
             <label for="JDposition">参考行程位置</label><input type="text" name='site' id="JDposition4" onkeyup="JDreg4()" placeholder="请输入参考行程位置">
             <br><br>
-            <label for="JDtype">参考行程类型</label>
+            <label for="JDtype">参考行程目的地</label>
             <select name="lxid" id="JDtype">
                 @if(isset($Tclass[4]->dclass[0]))
                     @foreach($Tclass[4]->dclass as $k => $v)

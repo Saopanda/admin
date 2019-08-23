@@ -159,7 +159,7 @@
                 </div>
             </div>
             <br><br>
-            <label for="XCname">行程名称</label><input type="text" name="name" id="XCname" placeholder="请输入行程名称">
+            <label for="XCname">行程名称</label><input maxlength="51" onkeyup="fontLen(this.value)" type="text" name="name" id="XCname" placeholder="请输入行程名称">
             <label for="XCdate">出发时间</label><input type="date" name='start_date' id="XCdeta" placeholder="请输入出发时间">
             <br><br>
 
@@ -182,6 +182,18 @@
     </div>
 @endsection
 @section('script')
+
+
+//行程名称最多50个字
+function fontLen(v){
+    fontLenght = v.length;
+    console.log(fontLenght);
+    if(fontLenght > 50){
+        alert('行程名称不能超过50个字符')
+    }
+}
+
+
     $('#goods').addClass('active');
 
     // 删除图片

@@ -120,10 +120,9 @@
     padding-top:20px;
     }
     .pagination-box ul li{
-    padding: 10px;
-    width: 15px;
-    height: 15px;
-    line-height: 15px;
+        width: 35px;
+    height: 35px;
+    line-height: 35px;
     float: left;
     color: #000;
     background: #1497E4;
@@ -133,6 +132,8 @@
     cursor: pointer;
     }
     .pagination-box ul li a{
+        display: block;
+    width: 100%;
     color: #fff;
     background: #1497E4;
     }
@@ -181,6 +182,7 @@
                         <i><img src="/images/TravelRepository/搜索.png" alt=""></i>
                     </div> -->
                 </div>
+                <div class="table-box" style="min-height:572px;">
 
                 <table border="0" cellpadding="3" cellspacing="1" bgcolor="#fff">
                     <thead>
@@ -220,6 +222,8 @@
                     @endforeach
                     </tbody>
                 </table>
+                </div>
+                
                 <div class="pagination-box">
                     {{ $resource->appends(['classid' => $classid])->links() }}
                 </div>
@@ -227,6 +231,21 @@
         @endif
 @endsection
 @section('script')
+var search= location.search;
+var isPage= search.indexOf('page');
+var index = 1
+if(isPage !== -1){
+    index = Number(search.slice(-1));
+}else{
+    index = 1
+}
+
+var pageItem= document.getElementsByClassName('page-item');
+window.onload=function (){
+    pageItem[index].style.backgroundColor="#006099";
+}
+
+
     $('#resource').addClass('active');
     var iconChange = document.getElementsByClassName('iconChange');
     // tabChange(iconChange)

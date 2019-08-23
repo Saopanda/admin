@@ -103,8 +103,8 @@
         <form action="/login" method="post" class="box" autocomplete="off">
             {{csrf_field()}}
             <strong>登陆</strong>
-            <p><input onkeyup="reg()" name="name" type="text" placeholder="用户名/手机号/邮箱"></p>
-            <p><input onkeyup="reg()" type="password" name="passwd" placeholder="密码"></p>
+            <p><input onkeyup="reg()" name="name" type="text" placeholder="用户名/手机号/邮箱" value=""></p>
+            <p><input onkeyup="reg()" type="password" name="passwd" placeholder="密码" value=""></p>
             <p class="center"><button id="submit" type="submit" class="unpass" disabled='true'>登陆</button></p>
             <p style="text-align: center;color: #F44336;">@if(session('mes')) {{session('mes')}}@endif</p>
 
@@ -114,6 +114,12 @@
 
 </body>
 <script>
+    window.onload=function(){
+        var inp = document.getElementsByTagName('input');
+        var sbt = document.getElementById('submit');
+        var len = inp.length;
+        reg()
+    }
     var inp = document.getElementsByTagName('input');
     var sbt = document.getElementById('submit');
     var len = inp.length;
