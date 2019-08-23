@@ -144,7 +144,7 @@
         .banner-price{
             position: absolute;
             bottom: 24px;
-            left: 500px;
+            right: 300px;
         }
         .banner-price strong{
             color: #fff;
@@ -155,7 +155,7 @@
             width: 30px;
             position: absolute;
             bottom: 20px;
-            left: 300px;
+            left: 150px;
             display: block;
             border: solid 1px #fff;
             color: #fff;

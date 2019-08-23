@@ -162,7 +162,7 @@
                 <div class="pic"><img src="{{$rs->banner}}"><b>×</b></div>
             </div>
             <br><br>
-            <label for="XCname">行程名称</label><input type="text" name="name" id="XCname" value="{{$rs->name}}">
+            <label for="XCname">行程名称</label><input maxlength="51" onkeyup="fontLen(this.value)" type="text" name="name" id="XCname" value="{{$rs->name}}">
             <label for="XCdate">出发时间</label><input type="date" name='start_date' id="XCdeta" value="{{$rs->start_date}}">
             <br><br>
             <label for="XCdayNum">出行天数</label><input type="text" name="days" id="XCdayNum" value="{{$rs->days}}">
@@ -188,6 +188,16 @@
     </div>
 @endsection
 @section('script')
+
+//行程名称最多50个字
+function fontLen(v){
+    fontLenght = v.length;
+    console.log(fontLenght);
+    if(fontLenght > 50){
+        alert('行程名称不能超过50个字符')
+    }
+}
+
 
 // 删除图片
     $('#upimgbox').click(function(e){
