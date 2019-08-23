@@ -265,7 +265,11 @@
         <div class="remarks">
             <h5>酒店住宿安排</h5>
             @foreach($data['jiudian'] as $k3 => $v3)
-            <p>{{$v3->lxinfo->name}} ： {{$v3->name}}</p>
+                @if(isset($v3->lxinfo->name))
+                <p>{{$v3->lxinfo->name}} ： {{$v3->name}}</p>
+                @else
+                    资源已失效 <br>
+                @endif
             @endforeach
             <h5>价格包含</h5>
             <p>
