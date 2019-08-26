@@ -162,7 +162,6 @@ class travelResourceController extends Controller
             //  进行上传图片动作
             foreach($request->imgs as $k => $v){
                 $img[$k] = $this->base64_image_content($v,'storage/images');
-
 //                $name = substr(uniqid(),7,6);
 //                $img[$k] = $v->storeAs('images/'.date('Y-m-d'),$name.'.'.$v->extension());
             }
@@ -174,7 +173,7 @@ class travelResourceController extends Controller
         //  数据库添加操作
         $data['status'] = '1';
         travelresource::where('id',$id)->update($data);
-        return redirect('/resource');
+        return redirect('/resource?classid='.$data['classid']);
     }
 
     /**
