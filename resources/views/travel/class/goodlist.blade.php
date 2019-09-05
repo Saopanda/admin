@@ -83,7 +83,7 @@ form{
         <thead>
         <tr>
             <td>ID</td>
-            <td>资源名称</td>
+            <td>分类名称</td>
             <td>所属分类</td>
             <td>操作</td>
         </tr>
@@ -127,8 +127,10 @@ form{
 @endsection
 
 @section('toplist')
-<li><a class="active" href="">资源分类列表</a></li>
-<li><a href=""></a></li>
+    <li><a href="/travelclass">资源分类列表</a></li>
+    <li class="closeLi">
+        <a class="active" href="/goodclass">商品分类列表</a>
+    </li>
 @endsection
 
 @section('script')

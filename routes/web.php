@@ -71,7 +71,11 @@ Route::group(['middleware'=>'admin'],function (){
     /**
      * 分类控制器
      */
+    //  资源分类
     Route::resource('/travelclass','travelClassController');
+    //  商品分类
+    Route::resource('/goodclass','goodClassController');
+
 
     /**
      * 用户控制器

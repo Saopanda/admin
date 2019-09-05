@@ -18,7 +18,7 @@ class travelClassController extends Controller
         $class = travelclass::with('dclass:id,name,classid')
             ->where(['classid'=>'0'])
             ->get();
-        return view('travel.class.list',['class'=>$class,'title'=>$title]);
+        return view('travel.class.travellist',['class'=>$class,'title'=>$title]);
     }
 
     /**
