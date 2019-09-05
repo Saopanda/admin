@@ -137,6 +137,10 @@
     input[type=date]::-webkit-inner-spin-button {
     visibility: hidden;
     }
+    /* 添加酒店 */
+        .add-hotel {
+            border: #000 1px solid;
+        }
 @endsection
 
 @section('toplist')
@@ -174,6 +178,12 @@
                     <option value="0">请添加对应分类</option>
                 @endif
             </select>
+
+            <div class="add-hotel">
+                    <ul id="hotel-list"></ul>
+                    <button onclick="addHotel()" id="addHotelBtn" type="button">+ 添加酒店</button>
+                </div>
+
             <br><br>
             <div class="submitbox">
                 <input type="submit" name="submit" id="submit" value="下一步添加每日行程">
@@ -183,6 +193,59 @@
 @endsection
 @section('script')
 
+
+// 添加酒店 the start
+    var hotelList = document.getElementById('hotel-list')
+    function addHotel() {
+        isHide(0);
+        var liNode =
+            '<li> <input type="text" name="" id="" placeholder="搜索酒店" class="must-fill" onkeyup="isMustFill(this.value)">' +
+            '<input type="text" placeholder="居住天数" class="must-fill" onkeyup="isMustFill(this.value)"> 天' +
+            '<input type="text" placeholder="实时价格"> 元' +
+            '<button type="button" onclick="removeThis(this)">×</button></li>'
+        var li = document.createElement('li');
+        li.innerHTML = liNode;
+        hotelList.appendChild(li)
+    }
+    // 删除当前 <li>
+    function removeThis(e) {
+        var len = hotelList.childElementCount;
+        if (len == 1) {
+            isHide(1);
+        }
+        var thisNode = e.parentElement;
+        var parent = thisNode.parentElement;
+        console.log(thisNode)
+        parent.removeChild(thisNode);
+    }
+
+    // 确定输入完成
+    function isMustFill(value) {
+        console.log(value)
+        var AllMustNode = document.getElementsByClassName('must-fill');
+        var len = AllMustNode.length;
+        for (var i = 0; i < len; i++) {
+            //   console.log(AllMustNode[i].value)
+            if (AllMustNode[i].value == '') {
+                isHide(0)
+            } else {
+                isHide(1)
+            }
+        }
+    }
+
+    // 是否显示 “添加酒店按钮”
+    function isHide(isHide) {
+        //0 隐藏 1显示
+        var addHotelBtn = document.getElementById('addHotelBtn');
+        if (isHide) {
+            addHotelBtn.style.display = 'block';
+        } else {
+            addHotelBtn.style.display = 'none'
+        }
+    }
+
+    // 添加酒店 the end
 
 //行程名称最多50个字
 function fontLen(v){

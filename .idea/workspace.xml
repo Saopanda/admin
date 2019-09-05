@@ -3,9 +3,344 @@
   <component name="ChangeListManager">
     <list default="true" id="321a5711-718f-4010-910a-3b6e1e15f229" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/travelResourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/travelResourceController.php" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/app/travelresource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/travelresource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/travel/resource/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/travel/resource/add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/travel/resource/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/travel/resource/edit.blade.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/public/._ue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/._dialogs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/._index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/._lang" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/._php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/._themes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/._third-party" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/._ueditor.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/._ueditor.all.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/._ueditor.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/._ueditor.parse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/._ueditor.parse.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._anchor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._attachment" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._background" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._charts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._emotion" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._gmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._help" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._image" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._insertframe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._internal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._link" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._music" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._preview" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._scrawl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._searchreplace" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._snapscreen" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._spechars" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._table" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._video" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._webapp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/._wordimage" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/anchor/._anchor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/._attachment.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/._attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/._attachment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/._fileTypeImages" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/._images" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/fileTypeImages/._icon_chm.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/fileTypeImages/._icon_default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/fileTypeImages/._icon_doc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/fileTypeImages/._icon_exe.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/fileTypeImages/._icon_jpg.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/fileTypeImages/._icon_mp3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/fileTypeImages/._icon_mv.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/fileTypeImages/._icon_pdf.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/fileTypeImages/._icon_ppt.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/fileTypeImages/._icon_psd.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/fileTypeImages/._icon_rar.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/fileTypeImages/._icon_txt.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/fileTypeImages/._icon_xls.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/images/._alignicon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/images/._alignicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/images/._bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/images/._file-icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/images/._file-icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/images/._icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/images/._icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/images/._image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/images/._progress.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/images/._success.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/attachment/images/._success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/background/._background.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/background/._background.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/background/._background.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/background/._images" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/background/images/._bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/background/images/._success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/charts/._chart.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/charts/._charts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/charts/._charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/charts/._charts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/charts/._images" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/charts/images/._charts0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/charts/images/._charts1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/charts/images/._charts2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/charts/images/._charts3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/charts/images/._charts4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/charts/images/._charts5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/emotion/._emotion.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/emotion/._emotion.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/emotion/._emotion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/emotion/._images" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/emotion/images/._0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/emotion/images/._bface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/emotion/images/._cface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/emotion/images/._fface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/emotion/images/._jxface2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/emotion/images/._neweditor-tab-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/emotion/images/._tface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/emotion/images/._wface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/emotion/images/._yface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/gmap/._gmap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/help/._help.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/help/._help.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/help/._help.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/image/._image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/image/._image.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/image/._image.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/image/._images" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/image/images/._alignicon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/image/images/._bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/image/images/._icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/image/images/._icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/image/images/._image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/image/images/._progress.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/image/images/._success.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/image/images/._success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/insertframe/._insertframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/link/._link.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/map/._map.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/map/._show.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/music/._music.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/music/._music.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/music/._music.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/preview/._preview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/._images" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/._scrawl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/._scrawl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/._scrawl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/images/._addimg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/images/._brush.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/images/._delimg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/images/._delimgH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/images/._empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/images/._emptyH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/images/._eraser.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/images/._redo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/images/._redoH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/images/._scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/images/._scaleH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/images/._size.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/images/._undo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/scrawl/images/._undoH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/searchreplace/._searchreplace.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/searchreplace/._searchreplace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/snapscreen/._snapscreen.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/spechars/._spechars.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/spechars/._spechars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/table/._dragicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/table/._edittable.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/table/._edittable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/table/._edittable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/table/._edittd.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/table/._edittip.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/template/._config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/template/._images" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/template/._template.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/template/._template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/template/._template.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/template/images/._bg.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/template/images/._pre0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/template/images/._pre1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/template/images/._pre2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/template/images/._pre3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/template/images/._pre4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/._images" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/._video.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/._video.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/._video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/images/._bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/images/._center_focus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/images/._file-icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/images/._file-icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/images/._icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/images/._icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/images/._image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/images/._left_focus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/images/._none_focus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/images/._progress.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/images/._right_focus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/images/._success.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/video/images/._success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/webapp/._webapp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/wordimage/._fClipboard_ueditor.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/wordimage/._imageUploader.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/wordimage/._tangram.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/wordimage/._wordimage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/dialogs/wordimage/._wordimage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/._en" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/._zh-cn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/._en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/._images" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/images/._addimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/images/._alldeletebtnhoverskin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/images/._alldeletebtnupskin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/images/._background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/images/._button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/images/._copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/images/._deletedisable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/images/._deleteenable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/images/._listbackground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/images/._localimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/images/._music.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/images/._rotateleftdisable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/images/._rotateleftenable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/images/._rotaterightdisable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/images/._rotaterightenable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/en/images/._upload.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/zh-cn/._images" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/zh-cn/._zh-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/zh-cn/images/._copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/zh-cn/images/._localimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/zh-cn/images/._music.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/lang/zh-cn/images/._upload.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/php/._Uploader.class.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/php/._action_crawler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/php/._action_list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/php/._action_upload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/php/._config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/php/._controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/._default" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/._iframe.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/._css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/._dialogbase.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/._images" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/css/._ueditor.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/css/._ueditor.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._anchor.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._arrow_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._arrow_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._button-bg.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._cancelbutton.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._charts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._cursor_h.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._cursor_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._cursor_v.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._cursor_v.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._dialog-title-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._filescan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._highlighted.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._icons-all.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._loaderror.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._lock.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._neweditor-tab-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._pagebreak.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._sortable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._spacer.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._sparator_v.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._table-cell-align.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._tangram-colorpicker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._toolbar_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._unhighlighted.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._upload.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._videologo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._word.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/themes/default/images/._wordpaste.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/._SyntaxHighlighter" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/._codemirror" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/._highcharts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/._jquery-1.10.2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/._jquery-1.10.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/._jquery-1.10.2.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/._snapscreen" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/._video-js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/._webuploader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/._xss.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/._zeroclipboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/SyntaxHighlighter/._shCore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/SyntaxHighlighter/._shCoreDefault.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/codemirror/._codemirror.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/codemirror/._codemirror.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/._adapters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/._highcharts-more.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/._highcharts-more.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/._highcharts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/._highcharts.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/._modules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/._themes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/adapters/._mootools-adapter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/adapters/._mootools-adapter.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/adapters/._prototype-adapter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/adapters/._prototype-adapter.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/adapters/._standalone-framework.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/adapters/._standalone-framework.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._annotations.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._annotations.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._canvas-tools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._canvas-tools.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._data.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._drilldown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._drilldown.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._exporting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._exporting.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._funnel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._funnel.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._heatmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._heatmap.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._map.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._no-data-to-display.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/modules/._no-data-to-display.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/themes/._dark-blue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/themes/._dark-green.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/themes/._gray.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/themes/._grid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/highcharts/themes/._skies.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/snapscreen/._UEditorSnapscreen.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/video-js/._font" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/video-js/._video-js.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/video-js/._video-js.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/video-js/._video-js.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/video-js/._video.dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/video-js/._video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/video-js/font/._vjs.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/video-js/font/._vjs.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/video-js/font/._vjs.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/video-js/font/._vjs.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/webuploader/._Uploader.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/webuploader/._webuploader.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/webuploader/._webuploader.custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/webuploader/._webuploader.custom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/webuploader/._webuploader.flashonly.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/webuploader/._webuploader.flashonly.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/webuploader/._webuploader.html5only.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/webuploader/._webuploader.html5only.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/webuploader/._webuploader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/webuploader/._webuploader.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/webuploader/._webuploader.withoutimage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/webuploader/._webuploader.withoutimage.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/zeroclipboard/._ZeroClipboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/zeroclipboard/._ZeroClipboard.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ue/third-party/zeroclipboard/._ZeroClipboard.swf" beforeDir="false" />
+>>>>>>> bc484a61876bfb2886de55d73b3926235a0e7126
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +396,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/travel/resource/add.blade.php">
@@ -90,6 +426,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="318">
               <caret line="140" column="83" selection-start-line="140" selection-start-column="83" selection-end-line="140" selection-end-column="83" />
+=======
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/travelResourceController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="173" column="30" lean-forward="true" selection-start-line="173" selection-start-column="30" selection-end-line="173" selection-end-column="30" />
+>>>>>>> bc484a61876bfb2886de55d73b3926235a0e7126
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -141,7 +485,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/travelClassController.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/EnableCrossRequestMiddleware.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
-        <option value="$PROJECT_DIR$/resources/views/travel/resource/list.blade.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/database/migrations/2019_07_22_103951_create_travel_goods_poi_table.php" />
         <option value="$PROJECT_DIR$/resources/views/travel/goods/addpoi.blade.php" />
@@ -159,7 +502,16 @@
         <option value="$PROJECT_DIR$/resources/views/travel/resource/add.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/travel/resource/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/travelresource.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/Http/Controllers/travelResourceController.php" />
+=======
+        <option value="$PROJECT_DIR$/resources/views/travel/goods/info.blade.php" />
+        <option value="/private/var/folders/8s/kdx5_7dx0sb3q4brmh8g2d880000gn/T/fz3temp-2/info.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/travel/resource/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/travel/resource/add.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/travelResourceController.php" />
+        <option value="$PROJECT_DIR$/resources/views/travel/resource/list.blade.php" />
+>>>>>>> bc484a61876bfb2886de55d73b3926235a0e7126
       </list>
     </option>
   </component>
@@ -256,8 +608,13 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="90" />
     <option name="y" value="23" />
+=======
+    <option name="x" value="648" />
+    <option name="y" value="36" />
+>>>>>>> bc484a61876bfb2886de55d73b3926235a0e7126
     <option name="width" value="1403" />
     <option name="height" value="814" />
   </component>
@@ -267,7 +624,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -323,6 +679,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -391,12 +748,23 @@
       <workItem from="1566212728110" duration="3000" />
       <workItem from="1566268007481" duration="118000" />
       <workItem from="1566282224716" duration="10000" />
+<<<<<<< HEAD
       <workItem from="1566283553412" duration="1338000" />
+=======
+      <workItem from="1566283553412" duration="1740000" />
+      <workItem from="1566456554760" duration="698000" />
+      <workItem from="1566551889984" duration="794000" />
+      <workItem from="1566801791783" duration="1670000" />
+>>>>>>> bc484a61876bfb2886de55d73b3926235a0e7126
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="91752000" />
+=======
+    <option name="totallyTimeSpent" value="95316000" />
+>>>>>>> bc484a61876bfb2886de55d73b3926235a0e7126
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -408,10 +776,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="90" y="23" width="1403" height="814" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24246877" />
+=======
+    <frame x="648" y="36" width="1403" height="814" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21381338" />
+>>>>>>> bc484a61876bfb2886de55d73b3926235a0e7126
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -551,13 +926,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="332" column="12" selection-start-line="332" selection-start-column="6" selection-end-line="332" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/travel/resource/list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="207" column="36" lean-forward="true" selection-start-line="207" selection-start-column="36" selection-end-line="207" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -707,6 +1075,17 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/app/travelresource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="93" selection-start-line="11" selection-start-column="93" selection-end-line="11" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///private/var/folders/8s/kdx5_7dx0sb3q4brmh8g2d880000gn/T/fz3temp-2/info.blade.php" />
+>>>>>>> bc484a61876bfb2886de55d73b3926235a0e7126
     <entry file="file://$PROJECT_DIR$/resources/views/travel/resource/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -714,6 +1093,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/views/travel/resource/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
@@ -723,6 +1103,12 @@
             <element signature="e#5498#5518#0#HTML" expanded="true" />
             <element signature="e#5216#5262#0#HTML" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/resources/views/travel/goods/info.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="267" column="43" selection-start-line="267" selection-start-column="43" selection-end-line="267" selection-end-column="43" />
+>>>>>>> bc484a61876bfb2886de55d73b3926235a0e7126
         </state>
       </provider>
     </entry>
@@ -737,6 +1123,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
           <caret line="140" column="83" selection-start-line="140" selection-start-column="83" selection-end-line="140" selection-end-column="83" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/travel/resource/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1891">
+          <caret line="284" column="2" selection-start-line="284" selection-start-column="2" selection-end-line="287" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/travel/resource/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="168" column="51" lean-forward="true" selection-start-line="168" selection-start-column="51" selection-end-line="168" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/travelResourceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="173" column="30" lean-forward="true" selection-start-line="173" selection-start-column="30" selection-end-line="173" selection-end-column="30" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
