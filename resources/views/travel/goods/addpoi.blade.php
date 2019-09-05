@@ -319,6 +319,7 @@ function Rsearch(e){
                     "<li data-id=" + i + "><h4>" + item.name + "</h4><img src=" + JSON.parse(mes[i].imgs)[0] + ">" + "<div><p>" + item
                     .des + "</p>" + "<span>参考价格：" + item.price + "</span>" + "</div>" +
                     "</li>"
+
                 );
             });
             // 数据到form 表单中
@@ -379,9 +380,7 @@ function Rsearch(e){
             // 加载数据
             $.each(class2, function (i, item) {
                 $("#typeListUl").append(
-                    "<li data-id=" + i + "><h4>" + item.name + "</h4><img src=" + item
-                    .imgs + ">" + "<div><p>" + item
-                    .des + "</p>" + "<span>参考价格：" + item.price + "</span>" + "</div>" +
+                    "<li data-id=" + i + "><h4>" + item.name + "</h4>" + "<div>"+ "<span>参考价格：" + item.price + "</span>" + "</div>" +
                     "</li>"
                 );
             });
