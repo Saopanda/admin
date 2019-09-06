@@ -13,6 +13,8 @@ use App\goodclass;
 class travelGoodsController extends Controller
 {
 
+
+
     /**
      *  加精
      */
@@ -69,8 +71,8 @@ class travelGoodsController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->only('name','start_date','days','classid');
-        if(!isset($data['name']) || !isset($data['start_date']) &&!isset($data['days']) &&!isset($data['classid'])){
+        $data = $request->only('name','start_date','days','classid','jiudian');
+        if(!isset($data['jiudian']) || !isset($data['name']) || !isset($data['start_date']) &&!isset($data['days']) &&!isset($data['classid'])){
             return view('travel.error.401',['mes'=>'请完整输入表单']);
         }
         if(!is_null($request->banner)){
@@ -81,7 +83,14 @@ class travelGoodsController extends Controller
         }else{
             return view('travel.error.401',['mes'=>'请上传banner图']);
         }
+        $tmp = $data['jiudian'];
+        $data['jiudian'] = '';
+        foreach($tmp as $k=>$v){
+            $data['jiudian'] .= ','.$v;
+        }
+        $data['jiudian'] = trim($data['jiudian'],',');
         $data['status'] = 0;
+        dd($data);
         $rs = travelgoods::create($data);
         return redirect('/goods_poi/'.$rs->id.'/create');
     }

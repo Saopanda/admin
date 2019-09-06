@@ -41,6 +41,7 @@ Route::group(['middleware'=>'admin'],function (){
      *
      */
     Route::post('/R_search','travelResourceController@searchResource');
+    Route::post('/searchJd','travelResourceController@searchJd');
 
 
     /**

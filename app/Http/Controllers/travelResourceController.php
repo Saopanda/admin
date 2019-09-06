@@ -111,11 +111,29 @@ class travelResourceController extends Controller
     {
         $value = $request->only('value','classid');
         $res = travelresource::where(['classid'=>$value['classid'],'status'=>'1'])
+            ->select('id','name','price','site')
             ->where('name','like','%'.$value['value'].'%')
             ->get();
         return $res;
     }
 
+    public function searchJd(Request $request)
+    {
+        $value = $request->only('value','classid');
+        $res = travelresource::where(['classid'=>$value['classid'],'status'=>'1'])
+            ->select('id','name','price','site')
+            ->where('name','like','%'.$value['value'].'%')
+            ->limit(10)
+            ->get()->toarray();
+        $res2 = travelresource::where(['classid'=>$value['classid'],'status'=>'1'])
+            ->select('id','name','price','site')
+            ->Where('site','like','%'.$value['value'].'%')
+            ->limit(10)
+            ->get()->toarray();
+
+        $res = array_merge($res,$res2);
+        return $res;
+    }
     /**
      * Display the specified resource.
      *

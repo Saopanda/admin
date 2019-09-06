@@ -1,5 +1,6 @@
 @extends('travel.layouts.index')
 @section('style')
+    <style>
     .main h3 {
     font-weight: 500;
     font-size: 19px;
@@ -141,6 +142,63 @@
         .add-hotel {
             border: #000 1px solid;
         }
+    .model-in{
+        margin-left: 110px;
+        margin-bottom: 20px;
+    }
+    #add_jiudian .name_input{
+        width: 40%;
+        padding: 0 8px;
+        box-sizing: border-box;
+        margin-right: 20px;
+    }
+    .in-list {
+        width: 40%;
+        max-height: 170px;
+        overflow-x: hidden;
+        background: #ededed;
+        border-top: dashed #fff;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        line-height: 2;
+        color: #7D7D7D;
+        list-style: none;
+        display: none;
+    }
+    .in-list li{
+        cursor: pointer;
+        padding: 0 8px;
+    }
+    .in-list li:hover{
+        background: #17A9FF;
+        color: #fff;
+    }
+    .in-list li span{
+        float: right;
+    }
+    .add_button{
+        margin-left: 110px;
+        border: 0px;
+        padding: 8px 12px;
+        border-radius: 4px;
+        background: rgb(249, 143, 21);
+        color: #fff;
+        cursor: pointer;
+        margin-top: 4px;
+        display: inline-block;
+    }
+        .jiudiandays{
+            width:66px;
+        }
+        .closebtn{
+            cursor: pointer;
+            background: #d43f3a;
+            padding: 6px 8px;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+    </style>
 @endsection
 
 @section('toplist')
@@ -178,72 +236,135 @@
                     <option value="0">请添加对应分类</option>
                 @endif
             </select>
+            <br><br>
 
-            <div class="add-hotel">
-                    <ul id="hotel-list"></ul>
-                    <button onclick="addHotel()" id="addHotelBtn" type="button">+ 添加酒店</button>
+            {{--酒店模块--}}
+            <div id="add_jiudian">
+                <label style="float: left;margin-top: 7px;" for="XCname">添加酒店</label>
+                <div class="model-in">
+                    <input onkeyup="hehe($(this))" class="name_input" type="text" placeholder="请输入酒店名称">
+                    <input type="hidden" name="jiudian[]" class="trueinput">
+                    <span class="closebtn" onclick="deljiudian($(this))">X</span>
+                    <div class="in-list">
+                        <li> </li>
+                    </div>
                 </div>
-
+                <span class="add_button">继续新增酒店</span>
+            </div>
             <br><br>
             <div class="submitbox">
                 <input type="submit" name="submit" id="submit" value="下一步添加每日行程">
             </div>
         </form>
+        <div style="width: 1px;height: 200px"></div>
     </div>
 @endsection
 @section('script')
+// <script>
+    function getSearch(that){
+        var input_value = that.val()
+        $.ajax({
+            url: '/searchJd',
+            type: 'post',
+            dataType: 'json',
+            data: {
+                value: input_value,
+                classid:2
+            },
+            success:function (res) {
+                var something = ''
+                for (var i = res.length - 1; i >= 0; i--) {
+                    something += '<li onclick="clickLi($(this))" id="'+res[i].id+'"><text>'+res[i].name+'</text><span>['+res[i].site+']</span></li>'
+                }
+                that.siblings('.in-list').html(something)
+                that.siblings('.in-list').slideDown()
+            }
+        })
+    }
+    //  ajax传值
+    function chuandi(zhi){
+        return function(){
+            getSearch(zhi)
+        }
+    }
 
+    //  选中项目
+    function clickLi(a){
+        a.parent('.in-list').siblings('.name_input').val(a.children('text').html())
+        a.parent('.in-list').siblings('.trueinput').val(a.attr('id'))
+        a.parent('.in-list').slideUp();
+    }
+
+    //  输入文字
+    var timer
+    function hehe(that){
+        clearTimeout(timer)
+        timer = setTimeout(chuandi(that),300)
+    }
+
+    //  删除酒店
+    function deljiudian(that){
+        that.parent('.model-in').remove()
+    }
+
+    $(function(){
+        //  增加框
+        $('.add_button').click(function(event) {
+            var tmp_text = '<div class="model-in"><input onkeyup="hehe($(this))" class="name_input" type="text" placeholder="请输入酒店名称"><input type="hidden" name="jiudian[]" class="trueinput"> <span class="closebtn" onclick="deljiudian($(this))">X</span><div class="in-list"></div></div>'
+            $(this).before(tmp_text)
+        });
+    })
 
 // 添加酒店 the start
-    var hotelList = document.getElementById('hotel-list')
-    function addHotel() {
-        isHide(0);
-        var liNode =
-            '<li> <input type="text" name="" id="" placeholder="搜索酒店" class="must-fill" onkeyup="isMustFill(this.value)">' +
-            '<input type="text" placeholder="居住天数" class="must-fill" onkeyup="isMustFill(this.value)"> 天' +
-            '<input type="text" placeholder="实时价格"> 元' +
-            '<button type="button" onclick="removeThis(this)">×</button></li>'
-        var li = document.createElement('li');
-        li.innerHTML = liNode;
-        hotelList.appendChild(li)
-    }
-    // 删除当前 <li>
-    function removeThis(e) {
-        var len = hotelList.childElementCount;
-        if (len == 1) {
-            isHide(1);
-        }
-        var thisNode = e.parentElement;
-        var parent = thisNode.parentElement;
-        console.log(thisNode)
-        parent.removeChild(thisNode);
-    }
-
-    // 确定输入完成
-    function isMustFill(value) {
-        console.log(value)
-        var AllMustNode = document.getElementsByClassName('must-fill');
-        var len = AllMustNode.length;
-        for (var i = 0; i < len; i++) {
-            //   console.log(AllMustNode[i].value)
-            if (AllMustNode[i].value == '') {
-                isHide(0)
-            } else {
-                isHide(1)
-            }
-        }
-    }
-
-    // 是否显示 “添加酒店按钮”
-    function isHide(isHide) {
-        //0 隐藏 1显示
-        var addHotelBtn = document.getElementById('addHotelBtn');
-        if (isHide) {
-            addHotelBtn.style.display = 'block';
-        } else {
-            addHotelBtn.style.display = 'none'
-        }
-    }
+//     var hotelList = document.getElementById('hotel-list')
+//     function addHotel() {
+//         isHide(0);
+//         var liNode =
+//             '<li> <input type="text" name="" id="" placeholder="搜索酒店" class="must-fill" onkeyup="isMustFill(this.value)">' +
+//             '<input type="text" placeholder="居住天数" class="must-fill" onkeyup="isMustFill(this.value)"> 天' +
+//             '<input type="text" placeholder="实时价格"> 元' +
+//             '<button type="button" onclick="removeThis(this)">×</button></li>'
+//         var li = document.createElement('li');
+//         li.innerHTML = liNode;
+//         hotelList.appendChild(li)
+//     }
+//     // 删除当前 <li>
+//     function removeThis(e) {
+//         var len = hotelList.childElementCount;
+//         if (len == 1) {
+//             isHide(1);
+//         }
+//         var thisNode = e.parentElement;
+//         var parent = thisNode.parentElement;
+//         console.log(thisNode)
+//         parent.removeChild(thisNode);
+//     }
+//
+//     // 确定输入完成
+//     function isMustFill(value) {
+//         console.log(value)
+//         var AllMustNode = document.getElementsByClassName('must-fill');
+//         var len = AllMustNode.length;
+//         for (var i = 0; i < len; i++) {
+//             //   console.log(AllMustNode[i].value)
+//             if (AllMustNode[i].value == '') {
+//                 isHide(0)
+//             } else {
+//                 isHide(1)
+//             }
+//         }
+//     }
+//
+//     // 是否显示 “添加酒店按钮”
+//     function isHide(isHide) {
+//         //0 隐藏 1显示
+//         var addHotelBtn = document.getElementById('addHotelBtn');
+//         if (isHide) {
+//             addHotelBtn.style.display = 'block';
+//         } else {
+//             addHotelBtn.style.display = 'none'
+//         }
+//     }
 
     // 添加酒店 the end
 
@@ -336,4 +457,6 @@ function fontLen(v){
     })
 
     })
+    // </script>
+
 @endsection
