@@ -70,7 +70,6 @@ overflow: auto;
 
 .typeList li {
 width: 29.333%;
-height: 135px;
 margin: 1%;
 padding: 1%;
 cursor: pointer;
@@ -93,6 +92,7 @@ vertical-align: top;
 }
 
 .typeList li h4 {
+    display:flex;
 text-align: left;
 margin-bottom: 5px;
 color: #333333;
@@ -111,13 +111,14 @@ height: 57px; font-size: 14px; margin-left: 4px;
 }
 
 .typeList li span {
-display: block;
+float:right;    
+display: inline-block;
 color: #F98F15;
 width: 100%;
-text-align: left;
-margin-top: 10px;
-margin-left: 5px;
+text-align: right;
 }
+.typeList li .span1 {text-align: left;color:#333;font-size:18px;}
+.typeList li .span2 {color:#999;font-size:16px;}
 
 /* added 以添加的内容 */
 .added img {
@@ -158,7 +159,7 @@ font-size: 13px;
 font-weight: 100;
 cursor: pointer;
 display: inline-block;
-margin-left: 330px;
+left: 530px;
 text-align: right;
 }
 
@@ -209,6 +210,15 @@ position: absolute;
 bottom: 0;
 left: 0;
 cursor: pointer;
+}
+.added-price{
+    position: absolute;
+    top: 0;
+    left: 210px;
+}
+.added-price input{
+    height:25px;    
+    width: 80px;
 }
 @endsection
 
@@ -316,10 +326,8 @@ function Rsearch(e){
                 window.class2 = mes;
                 $.each(window.class2, function (i, item) {
                 $("#typeListUl").append(
-                    "<li data-id=" + i + "><h4>" + item.name + "</h4><img src=" + JSON.parse(mes[i].imgs)[0] + ">" + "<div><p>" + item
-                    .des + "</p>" + "<span>参考价格：" + item.price + "</span>" + "</div>" +
+                    "<li data-id=" + i + "><h4 class='clearfloat'><span class='fl span1'>" + item.name +  "</span><span class='fr span2'>参考价格：" + item.price + "</span>"+"</h4>" +
                     "</li>"
-
                 );
             });
             // 数据到form 表单中
@@ -380,7 +388,7 @@ function Rsearch(e){
             // 加载数据
             $.each(class2, function (i, item) {
                 $("#typeListUl").append(
-                    "<li data-id=" + i + "><h4>" + item.name + "</h4>" + "<div>"+ "<span>参考价格：" + item.price + "</span>" + "</div>" +
+                    "<li data-id=" + i + "><h4 class='clearfloat'><span class='fl span1'>" + item.name +  "</span><span class='fr span2'>参考价格：" + item.price + "</span>"+"</h4>" +
                     "</li>"
                 );
             });
@@ -423,21 +431,21 @@ function Rsearch(e){
                 var added = window.class2[n]
                 // console.log(n);
                 // console.log(added);
-                var price = prompt("请输入价格", " ");
+                // var price = prompt("请输入价格", " ");
 
-                var img = added.imgs;
-                if(added.imgs[0] == '['){
-                    img = JSON.parse(added.imgs)[0]
-                }
-                if (price != null) {
+                // var img = added.imgs;
+                // if(added.imgs[0] == '['){
+                //     img = JSON.parse(added.imgs)[0]
+                // }
+                // if (price != null) {
                     $("#addedUl").append(
                         "<li><h4>" + added.name +
-                        "</h4><span class='delete' onclick='deleteElement(this)'>删除</span><p><img src=" +
-                        img + "></p><p>" + added.des +
+                        "</h4><span class='added-price'>设置实时价格：<input type='number' name='price[]' value='0' min='0'> 元</span> <span class='delete' onclick='deleteElement(this)'>删除</span><p>" +
+                        "</p><p>" + added.des +
                         "</p> <input type='hidden' name='resourceid[]' value=" + added.id +
-                        "><input type='hidden' name='price[]' value=" + price + "></li>"
+                        "></li>"
                     );
-                }
+                // }
             }
         }
 
@@ -465,9 +473,8 @@ function Rsearch(e){
             //渲染列表
             $.each(class2, function (i, item) {
                 $("#typeListUl").append(
-                    "<li data-id=" + i + "><h4>" + item.name + "</h4><img src=" + item.imgs + ">" +
-                    "<div><p>" + item
-                    .des + "</p>" + "<span>参考价格：" + item.price + "</span>" + "</div>" + "</li>"
+                    "<li data-id=" + i + "><h4 class='clearfloat'><span class='fl span1'>" + item.name +  "</span><span class='fr span2'>参考价格：" + item.price + "</span>"+"</h4>" +
+                    "</li>"
                 );
             });
             clickli()
@@ -486,9 +493,8 @@ function Rsearch(e){
             //渲染二级分类
             $.each(class2, function (i, item) {
                 $("#typeListUl").append(
-                    "<li data-id=" + i + "><h4>" + item.name + "</h4><img src=" + item.imgs + ">" +
-                    "<div><p>" + item
-                    .des + "</p>" + "<span>参考价格：" + item.price + "</span>" + "</div>" + "</li>"
+                    "<li data-id=" + i + "><h4 class='clearfloat'><span class='fl span1'>" + item.name +  "</span><span class='fr span2'>参考价格：" + item.price + "</span>"+"</h4>" +
+                    "</li>"
                 );
             });
             // 数据到form 表单中
