@@ -145,7 +145,7 @@ height: 150px;
         <!-- 行程备注 -->
         <div class="fl right">
             <h3>行程备注</h3>
-            <textarea class="bz" name='' placeholder="选填..."></textarea>
+            <textarea class="bz" name='comment' placeholder="选填..."></textarea>
         </div>
         <!-- 酒店住宿安排 -->
         <!-- <div class="fl right">

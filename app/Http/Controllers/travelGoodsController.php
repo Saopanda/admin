@@ -90,7 +90,6 @@ class travelGoodsController extends Controller
         }
         $data['jiudian'] = trim($data['jiudian'],',');
         $data['status'] = 0;
-        dd($data);
         $rs = travelgoods::create($data);
         return redirect('/goods_poi/'.$rs->id.'/create');
     }
@@ -148,10 +147,7 @@ class travelGoodsController extends Controller
         $data['comment'] = $request->input('comment');
         $data['goodid'] = $gid;
         $data['dess'] = $request->input('dess');
-        if(is_null($data['comment'])){
-            return view('travel.error.401',['mes'=>'请输入每日概括']);
 
-        }
         if(!isset($request->resourceid)){
             return view('travel.error.401',['mes'=>'请添加资源']);
 
@@ -225,7 +221,7 @@ class travelGoodsController extends Controller
      */
     public function good_addlast_do(Request $request,$gid)
     {
-        $data = $request->only('price_sel','des');
+        $data = $request->only('price_sel','des','comment');
         if(!isset($data['price_sel']) || !isset($data['des'])){
 
             return view('travel.error.401',['mes'=>'请输入指导价和须知']);
@@ -261,7 +257,7 @@ class travelGoodsController extends Controller
             }
             ])
             ->where('id',$id)
-            ->select('id','name','banner','start_date','days','price','price_sel','des')
+            ->select('id','name','banner','start_date','days','price','price_sel','des','comment')
             ->first();
         $rs->banner = json_decode($rs->banner);
         $data = $this->good_addlast($id,1);

@@ -242,32 +242,32 @@ font-size: 18px;
         </div>
     </div>
     <!-- 酒店安排 -->
-    <div class='hotel-ap'>
-        <div>
-            <strong class="titleName">酒店安排</strong>
-            <a href="/goods/{{$rs->id}}/edit" class="edit-a"> 编辑</a>
-            <ul>
-                <li class='hotel-ap-li'>
-                    <a href="">楠大极福福发酒店</a>
-                    <span>泰国 </span>
-                    <span>500</span> 
-                    <input type="text" value="12" disabled>
-                    <span>天</span>
-                    <input type="text" value="12" disabled>
-                    <span>元</span>
-                </li>
-                <li class='hotel-ap-li'>
-                    <a href="">楠大极福福发酒店</a>
-                    <span>泰国 </span>
-                    <span>500</span> 
-                    <input type="text" value="12" disabled>
-                    <span>天</span>
-                    <input type="text" value="12" disabled>
-                    <span>元</span>
-                </li>
-            </ul>
-        </div>
-    </div>
+{{--    <div class='hotel-ap'>--}}
+{{--        <div>--}}
+{{--            <strong class="titleName">酒店安排</strong>--}}
+{{--            <a href="/goods/{{$rs->id}}/edit" class="edit-a"> 编辑</a>--}}
+{{--            <ul>--}}
+{{--                <li class='hotel-ap-li'>--}}
+{{--                    <a href="">楠大极福福发酒店</a>--}}
+{{--                    <span>泰国 </span>--}}
+{{--                    <span>500</span> --}}
+{{--                    <input type="text" value="12" disabled>--}}
+{{--                    <span>天</span>--}}
+{{--                    <input type="text" value="12" disabled>--}}
+{{--                    <span>元</span>--}}
+{{--                </li>--}}
+{{--                <li class='hotel-ap-li'>--}}
+{{--                    <a href="">楠大极福福发酒店</a>--}}
+{{--                    <span>泰国 </span>--}}
+{{--                    <span>500</span> --}}
+{{--                    <input type="text" value="12" disabled>--}}
+{{--                    <span>天</span>--}}
+{{--                    <input type="text" value="12" disabled>--}}
+{{--                    <span>元</span>--}}
+{{--                </li>--}}
+{{--            </ul>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 
 
     <!-- 每日行程 -->
@@ -324,10 +324,8 @@ font-size: 18px;
         <a href="/goods_poi/{{$rs->id}}/create" class="yellow-btn">新增一天</a>
     </div>
     <div class="remarks">
-        <h5>酒店住宿安排</h5>
-        @foreach($data['jiudian'] as $k3 => $v3)
-        <p>{{$v3->lxinfo->name}} ： {{$v3->name}}</p>
-        @endforeach
+        <h5>行程备注</h5>
+        <p>{{$rs->comment}}</p>
         <h5>价格包含</h5>
         <p>
             @foreach($data['res'] as $k3 => $v3)
