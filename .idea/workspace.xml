@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="317baa36-698f-4ecf-bb97-e56084ad5e80" name="默认更改列表" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/travelGoodsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/travelGoodsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/travelResourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/travelResourceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/travelgoods.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/travelgoods.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/travel/goods/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/travel/goods/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/travel/goods/addpoi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/travel/goods/addpoi.blade.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server/" />
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
@@ -106,16 +101,19 @@
         <entry file="file://$PROJECT_DIR$/resources/views/travel/goods/add.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="449">
-              <caret line="187" column="30" lean-forward="true" selection-start-line="187" selection-start-column="30" selection-end-line="187" selection-end-column="30" />
+              <caret line="187" column="30" selection-start-line="187" selection-start-column="30" selection-end-line="187" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/travelGoodsController.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/travel/goods/addpoi.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="76" column="9" lean-forward="true" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
+            <state relative-caret-position="379">
+              <caret line="263" column="21" lean-forward="true" selection-start-line="263" selection-start-column="21" selection-end-line="263" selection-end-column="21" />
+              <folding>
+                <element signature="e#4097#4120#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,6 +132,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>searchResource</find>
+      <find>added-price</find>
+      <find>.added li</find>
+      <find>delete</find>
+      <find>设置实时价格</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -148,6 +150,7 @@
         <option value="$PROJECT_DIR$/resources/views/travel/goods/add.blade.php" />
         <option value="$PROJECT_DIR$/app/travelgoods.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/travelGoodsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/travel/goods/addpoi.blade.php" />
       </list>
     </option>
   </component>
@@ -237,9 +240,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="118" />
-    <option name="y" value="23" />
-    <option name="width" value="1412" />
+    <option name="x" value="241" />
+    <option name="y" value="97" />
+    <option name="width" value="1488" />
     <option name="height" value="851" />
   </component>
   <component name="ProjectView">
@@ -276,13 +279,6 @@
             <path>
               <item name="admin_travel" type="b2602c69:ProjectViewProjectNode" />
               <item name="admin_travel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Middleware" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="admin_travel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="admin_travel" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -297,6 +293,14 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="travel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="admin_travel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="admin_travel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="travel" type="462c0819:PsiDirectoryNode" />
+              <item name="goods" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -344,18 +348,18 @@
       <workItem from="1567664081416" duration="1000" />
       <workItem from="1567666902851" duration="5278000" />
       <workItem from="1567736039628" duration="6959000" />
-      <workItem from="1567755524747" duration="2679000" />
+      <workItem from="1567755524747" duration="6446000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15029000" />
+    <option name="totallyTimeSpent" value="18796000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="119" y="23" width="1412" height="851" extended-state="0" />
+    <frame x="241" y="97" width="1488" height="851" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2642336" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2503458" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -395,20 +399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/travel/goods/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="187" column="30" lean-forward="true" selection-start-line="187" selection-start-column="30" selection-end-line="187" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/travelResourceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="110" column="5" lean-forward="true" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/travelgoods.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -416,10 +406,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/travel/goods/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="187" column="30" selection-start-line="187" selection-start-column="30" selection-end-line="187" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/travelGoodsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="76" column="9" lean-forward="true" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
+        <state relative-caret-position="346">
+          <caret line="132" column="76" selection-start-line="132" selection-start-column="76" selection-end-line="132" selection-end-column="76" />
+          <folding>
+            <element signature="e#40#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/travelResourceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="113" column="48" lean-forward="true" selection-start-line="113" selection-start-column="48" selection-end-line="113" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/travel/goods/addpoi.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="263" column="21" lean-forward="true" selection-start-line="263" selection-start-column="21" selection-end-line="263" selection-end-column="21" />
+          <folding>
+            <element signature="e#4097#4120#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

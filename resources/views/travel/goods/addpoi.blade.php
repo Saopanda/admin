@@ -3,6 +3,7 @@
 
 form {
 padding-top: 20px;
+margin-bottom: 30px;
 }
 
 form label {
@@ -69,11 +70,16 @@ overflow: auto;
 }
 
 .typeList li {
-width: 29.333%;
-margin: 1%;
+width: 46%;
+margin: 1px;
 padding: 1%;
 cursor: pointer;
 background: #fff;
+}
+.typeList li:hover{
+background:#85d0fd;
+color:#fff;
+
 }
 
 .typeList li img {
@@ -132,17 +138,11 @@ margin-right: 10px;
 .added li {
 position: relative;
 margin: 30px;
+width:55%
 }
 
-.added h4::before {
-content: '';
-display: inline-block;
-width: 15px;
-height: 15px;
-margin-right: 10px;
-border-radius: 50%;
-background: #35CCF8;
-background-size: 20px;
+.added h4 {
+display:inline-block;
 }
 
 .added li p {
@@ -152,15 +152,14 @@ color: #696664;
 font-size: 14px;
 }
 .delete{
-position: absolute;
-top: 0px;
 color: #7e7e7e;
 font-size: 13px;
 font-weight: 100;
 cursor: pointer;
 display: inline-block;
-left: 530px;
 text-align: right;
+float: right;
+margin-left: 20px;
 }
 
 /* 按钮 */
@@ -212,14 +211,26 @@ left: 0;
 cursor: pointer;
 }
 .added-price{
-    position: absolute;
-    top: 0;
-    left: 210px;
+float:right
 }
 .added-price input{
     height:25px;    
     width: 80px;
 }
+.added li::before {
+content: '';
+display: inline-block;
+width: 15px;
+height: 15px;
+margin-right: 10px;
+border-radius: 50%;
+background: #35CCF8;
+background-size: 20px;
+    }
+
+
+
+
 @endsection
 
 @section('toplist')
@@ -241,6 +252,16 @@ cursor: pointer;
         <!-- 已添加内容 -->
         <div class="added">
             <ul id="addedUl">
+                <li>请选择酒店
+                    <select style="margin: 0 10px;" name="resourceid[]" id="">
+                        @foreach($jiudian as $k=>$v)
+                        <option value="{{$v->id}}">{{$v->name}}</option>
+                        @endforeach
+                    </select>
+                    <span class="delete" onclick="deleteElement(this)">删除</span>
+
+                    <span class="added-price">设置实时价格：<input type="number" name="price[]" value="0" min="0"> 元</span>
+                </li>
                 <!-- <li>
                         <h4>名称 <span class='delete'>删除</span></h4>
                         <p>
@@ -254,7 +275,7 @@ cursor: pointer;
         </div>
         <!-- 已添加内容 -->
     </form>
-
+    <hr>
     <!-- add 添加选项 -->
     <div class="addContent clearfloat">
         <h3 class="fl">选择添加内容</h3>
@@ -440,8 +461,7 @@ function Rsearch(e){
                 // if (price != null) {
                     $("#addedUl").append(
                         "<li><h4>" + added.name +
-                        "</h4><span class='added-price'>设置实时价格：<input type='number' name='price[]' value='0' min='0'> 元</span> <span class='delete' onclick='deleteElement(this)'>删除</span><p>" +
-                        "</p><p>" + added.des +
+                        "</h4><span class='delete' onclick='deleteElement(this)'>删除</span><span class='added-price'>设置实时价格：<input type='number' name='price[]' value='0' min='0'> 元</span> <p>" +
                         "</p> <input type='hidden' name='resourceid[]' value=" + added.id +
                         "></li>"
                     );

@@ -128,8 +128,11 @@ class travelGoodsController extends Controller
         $title = '行程添加';
 
         $count = good_days::where('goodid',$gid)->groupby('day')->select('day')->get();
+        $jiudian = travelgoods::where('id',$gid)->value('jiudian');
+        $jiudian = explode(',',$jiudian);
+        $jiudian = travelresource::wherein('id',$jiudian)->select('id','name')->get();
         $count = count($count);
-        return view('travel.goods.addpoi',['gid'=>$gid,'count'=>$count,'title'=>$title]);
+        return view('travel.goods.addpoi',['gid'=>$gid,'count'=>$count,'title'=>$title,'jiudian'=>$jiudian]);
     }
 
     /**
